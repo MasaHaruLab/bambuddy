@@ -1,0 +1,200 @@
+2026-08-01 21:00:22,036 INFO [sqlalchemy.engine.Engine] [59cf4611] [cached since 1.076e+05s ago] (1,)
+2026-08-01 21:00:22,037 INFO [sqlalchemy.engine.Engine] [59cf4611] SELECT printers.runtime_seconds, printers.print_hours_offset 
+FROM printers 
+WHERE printers.id = ?
+2026-08-01 21:00:22,037 INFO [sqlalchemy.engine.Engine] [59cf4611] [cached since 1.076e+05s ago] (1,)
+2026-08-01 21:00:22,038 INFO [sqlalchemy.engine.Engine] [88103e1d] BEGIN (implicit)
+2026-08-01 21:00:22,038 INFO [sqlalchemy.engine.Engine] [88103e1d] SELECT auth_ephemeral_tokens.id, auth_ephemeral_tokens.token, auth_ephemeral_tokens.token_type, auth_ephemeral_tokens.username, auth_ephemeral_tokens.provider_id, auth_ephemeral_tokens.nonce, auth_ephemeral_tokens.code_verifier, auth_ephemeral_tokens.challenge_id, auth_ephemeral_tokens.expires_at, auth_ephemeral_tokens.created_at 
+FROM auth_ephemeral_tokens 
+WHERE auth_ephemeral_tokens.token = ? AND auth_ephemeral_tokens.token_type = ?
+2026-08-01 21:00:22,038 INFO [sqlalchemy.engine.Engine] [88103e1d] [cached since 1.368e+05s ago] ('1566984f9eb5ac62155f2b4bf7f6e8f7', 'revoked_jti')
+2026-08-01 21:00:22,039 INFO [sqlalchemy.engine.Engine] [59cf4611] SELECT maintenance_types.id, maintenance_types.name, maintenance_types.description, maintenance_types.default_interval_hours, maintenance_types.interval_type, maintenance_types.icon, maintenance_types.wiki_url, maintenance_types.is_system, maintenance_types.is_deleted, maintenance_types.created_at 
+FROM maintenance_types 
+WHERE maintenance_types.is_deleted IS 0
+2026-08-01 21:00:22,039 INFO [sqlalchemy.engine.Engine] [59cf4611] [cached since 1.076e+05s ago] ()
+2026-08-01 21:00:22,040 INFO [sqlalchemy.engine.Engine] [88103e1d] SELECT users.id, users.username, users.email, users.password_hash, users.role, users.auth_source, users.is_active, users.created_at, users.updated_at, users.password_changed_at, users.cloud_token, users.cloud_email, users.cloud_region, users.cloud_token_invalid_at, users.orca_cloud_token, users.orca_cloud_refresh_token, users.orca_cloud_expires_at, users.orca_cloud_email, users.orca_cloud_user_id, users.orca_cloud_pending_verifier, users.orca_cloud_pending_state, users.orca_cloud_pending_at 
+FROM users 
+WHERE lower(users.username) = lower(?)
+2026-08-01 21:00:22,040 INFO [sqlalchemy.engine.Engine] [88103e1d] [cached since 1.368e+05s ago] ('[USER]',)
+2026-08-01 21:00:22,041 INFO [sqlalchemy.engine.Engine] [88103e1d] SELECT users_1.id AS users_1_id, groups.id AS groups_id, groups.name AS groups_name, groups.description AS groups_description, groups.permissions AS groups_permissions, groups.is_system AS groups_is_system, groups.created_at AS groups_created_at, groups.updated_at AS groups_updated_at 
+FROM users AS users_1 JOIN user_groups AS user_groups_1 ON users_1.id = user_groups_1.user_id JOIN groups ON groups.id = user_groups_1.group_id 
+WHERE users_1.id IN (?)
+2026-08-01 21:00:22,042 INFO [sqlalchemy.engine.Engine] [88103e1d] [cached since 1.368e+05s ago] (1,)
+2026-08-01 21:00:22,043 INFO [sqlalchemy.engine.Engine] [59cf4611] SELECT printer_maintenance.id, printer_maintenance.printer_id, printer_maintenance.maintenance_type_id, printer_maintenance.custom_interval_hours, printer_maintenance.custom_interval_type, printer_maintenance.enabled, printer_maintenance.last_performed_at, printer_maintenance.last_performed_hours, printer_maintenance.created_at, printer_maintenance.updated_at 
+FROM printer_maintenance 
+WHERE printer_maintenance.printer_id = ?
+2026-08-01 21:00:22,043 INFO [sqlalchemy.engine.Engine] [59cf4611] [cached since 1.076e+05s ago] (1,)
+2026-08-01 21:00:22,044 INFO [sqlalchemy.engine.Engine] [88103e1d] ROLLBACK
+2026-08-01 21:00:22,045 INFO [sqlalchemy.engine.Engine] [88103e1d] BEGIN (implicit)
+2026-08-01 21:00:22,046 INFO [sqlalchemy.engine.Engine] [88103e1d] SELECT auth_ephemeral_tokens.id, auth_ephemeral_tokens.token, auth_ephemeral_tokens.token_type, auth_ephemeral_tokens.username, auth_ephemeral_tokens.provider_id, auth_ephemeral_tokens.nonce, auth_ephemeral_tokens.code_verifier, auth_ephemeral_tokens.challenge_id, auth_ephemeral_tokens.expires_at, auth_ephemeral_tokens.created_at 
+FROM auth_ephemeral_tokens 
+WHERE auth_ephemeral_tokens.token = ? AND auth_ephemeral_tokens.token_type = ?
+2026-08-01 21:00:22,047 INFO [sqlalchemy.engine.Engine] [88103e1d] [cached since 1.368e+05s ago] ('1566984f9eb5ac62155f2b4bf7f6e8f7', 'revoked_jti')
+2026-08-01 21:00:22,048 INFO [sqlalchemy.engine.Engine] [59cf4611] SELECT maintenance_types.id AS maintenance_types_id, maintenance_types.name AS maintenance_types_name, maintenance_types.description AS maintenance_types_description, maintenance_types.default_interval_hours AS maintenance_types_default_interval_hours, maintenance_types.interval_type AS maintenance_types_interval_type, maintenance_types.icon AS maintenance_types_icon, maintenance_types.wiki_url AS maintenance_types_wiki_url, maintenance_types.is_system AS maintenance_types_is_system, maintenance_types.is_deleted AS maintenance_types_is_deleted, maintenance_types.created_at AS maintenance_types_created_at 
+FROM maintenance_types 
+WHERE maintenance_types.id IN (?, ?, ?, ?, ?, ?)
+2026-08-01 21:00:22,049 INFO [sqlalchemy.engine.Engine] [59cf4611] [cached since 1.076e+05s ago] (2, 3, 6, 7, 8, 9)
+2026-08-01 21:00:22,050 INFO [sqlalchemy.engine.Engine] [88103e1d] SELECT users.id, users.username, users.email, users.password_hash, users.role, users.auth_source, users.is_active, users.created_at, users.updated_at, users.password_changed_at, users.cloud_token, users.cloud_email, users.cloud_region, users.cloud_token_invalid_at, users.orca_cloud_token, users.orca_cloud_refresh_token, users.orca_cloud_expires_at, users.orca_cloud_email, users.orca_cloud_user_id, users.orca_cloud_pending_verifier, users.orca_cloud_pending_state, users.orca_cloud_pending_at 
+FROM users 
+WHERE lower(users.username) = lower(?)
+2026-08-01 21:00:22,050 INFO [sqlalchemy.engine.Engine] [88103e1d] [cached since 1.368e+05s ago] ('[USER]',)
+2026-08-01 21:00:22,051 INFO [sqlalchemy.engine.Engine] [88103e1d] SELECT users_1.id AS users_1_id, groups.id AS groups_id, groups.name AS groups_name, groups.description AS groups_description, groups.permissions AS groups_permissions, groups.is_system AS groups_is_system, groups.created_at AS groups_created_at, groups.updated_at AS groups_updated_at 
+FROM users AS users_1 JOIN user_groups AS user_groups_1 ON users_1.id = user_groups_1.user_id JOIN groups ON groups.id = user_groups_1.group_id 
+WHERE users_1.id IN (?)
+2026-08-01 21:00:22,051 INFO [sqlalchemy.engine.Engine] [88103e1d] [cached since 1.368e+05s ago] (1,)
+2026-08-01 21:00:22,052 INFO [sqlalchemy.engine.Engine] [59cf4611] COMMIT
+2026-08-01 21:00:22,054 INFO [sqlalchemy.engine.Engine] [88103e1d] ROLLBACK
+2026-08-01 21:00:22,055 INFO [sqlalchemy.engine.Engine] [88103e1d] BEGIN (implicit)
+2026-08-01 21:00:22,055 INFO [sqlalchemy.engine.Engine] [88103e1d] SELECT settings.id, settings."key", settings.value, settings.created_at, settings.updated_at 
+FROM settings
+2026-08-01 21:00:22,055 INFO [sqlalchemy.engine.Engine] [88103e1d] [cached since 1.076e+05s ago] ()
+2026-08-01 21:00:22,057 INFO [sqlalchemy.engine.Engine] [88103e1d] COMMIT
+2026-08-01 21:00:22,275 INFO [uvicorn.access] [-] [IP]:53713 - "POST /api/v1/cloud/filament-info HTTP/1.1" 200
+2026-08-01 21:00:22,508 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Found xcam inside print data: {'allow_skip_parts': False, 'buildplate_marker_detector': False, 'cfg': 8088999, 'first_layer_inspector': True, 'halt_print_sensitivity': 'medium', 'print_halt': True, 'printing_monitor': True, 'spaghetti_detector': True}
+2026-08-01 21:00:22,508 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Parsing xcam data - all fields: ['allow_skip_parts', 'buildplate_marker_detector', 'cfg', 'first_layer_inspector', 'halt_print_sensitivity', 'print_halt', 'printing_monitor', 'spaghetti_detector']
+2026-08-01 21:00:22,508 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] xcam cfg bitmask: 8088999 (binary: 0b11110110110110110100111)
+2026-08-01 21:00:22,508 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Received gcode_state: FINISH, gcode_file: /data/Metadata/plate_1.gcode, subtask_name: strawberry-container
+2026-08-01 21:00:22,508 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] ams_extruder_map: {'0': 0}
+2026-08-01 21:00:22,508 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Received command response: push_status
+2026-08-01 21:00:22,508 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] HMS data received: [{'attr': 83887616, 'code': 131184, 'ts_boot': 30691, 'ts_unix': '20260730184416'}, {'attr': 83886336, 'code': 196612, 'ts_boot': 171938377, 'ts_unix': '20260801182924'}]
+2026-08-01 21:00:22,508 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] lights_report: [{'mode': 'on', 'node': 'chamber_light'}, {'mode': 'flashing', 'node': 'work_light'}]
+2026-08-01 21:00:22,509 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] MQTT mapping field: [65535, 65535, 3]
+2026-08-01 21:00:22,509 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] gcode_state: FINISH -> FINISH, file: /data/Metadata/plate_1.gcode, subtask: strawberry-container
+2026-08-01 21:00:23,682 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Found xcam inside print data: {'allow_skip_parts': False, 'buildplate_marker_detector': False, 'cfg': 8088999, 'first_layer_inspector': True, 'halt_print_sensitivity': 'medium', 'print_halt': True, 'printing_monitor': True, 'spaghetti_detector': True}
+2026-08-01 21:00:23,683 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Parsing xcam data - all fields: ['allow_skip_parts', 'buildplate_marker_detector', 'cfg', 'first_layer_inspector', 'halt_print_sensitivity', 'print_halt', 'printing_monitor', 'spaghetti_detector']
+2026-08-01 21:00:23,683 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] xcam cfg bitmask: 8088999 (binary: 0b11110110110110110100111)
+2026-08-01 21:00:23,683 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Received gcode_state: FINISH, gcode_file: /data/Metadata/plate_1.gcode, subtask_name: strawberry-container
+2026-08-01 21:00:23,683 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] ams_extruder_map: {'0': 0}
+2026-08-01 21:00:23,683 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Received command response: push_status
+2026-08-01 21:00:23,683 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] HMS data received: [{'attr': 83887616, 'code': 131184, 'ts_boot': 30691, 'ts_unix': '20260730184416'}, {'attr': 83886336, 'code': 196612, 'ts_boot': 171938377, 'ts_unix': '20260801182924'}]
+2026-08-01 21:00:23,683 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] lights_report: [{'mode': 'on', 'node': 'chamber_light'}, {'mode': 'flashing', 'node': 'work_light'}]
+2026-08-01 21:00:23,684 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] MQTT mapping field: [65535, 65535, 3]
+2026-08-01 21:00:23,684 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] gcode_state: FINISH -> FINISH, file: /data/Metadata/plate_1.gcode, subtask: strawberry-container
+2026-08-01 21:00:24,282 INFO [sqlalchemy.engine.Engine] [422cf93b] BEGIN (implicit)
+2026-08-01 21:00:24,283 INFO [sqlalchemy.engine.Engine] [422cf93b] SELECT auth_ephemeral_tokens.id, auth_ephemeral_tokens.token, auth_ephemeral_tokens.token_type, auth_ephemeral_tokens.username, auth_ephemeral_tokens.provider_id, auth_ephemeral_tokens.nonce, auth_ephemeral_tokens.code_verifier, auth_ephemeral_tokens.challenge_id, auth_ephemeral_tokens.expires_at, auth_ephemeral_tokens.created_at 
+FROM auth_ephemeral_tokens 
+WHERE auth_ephemeral_tokens.token = ? AND auth_ephemeral_tokens.token_type = ?
+2026-08-01 21:00:24,283 INFO [sqlalchemy.engine.Engine] [422cf93b] [cached since 1.368e+05s ago] ('1566984f9eb5ac62155f2b4bf7f6e8f7', 'revoked_jti')
+2026-08-01 21:00:24,285 INFO [sqlalchemy.engine.Engine] [422cf93b] SELECT users.id, users.username, users.email, users.password_hash, users.role, users.auth_source, users.is_active, users.created_at, users.updated_at, users.password_changed_at, users.cloud_token, users.cloud_email, users.cloud_region, users.cloud_token_invalid_at, users.orca_cloud_token, users.orca_cloud_refresh_token, users.orca_cloud_expires_at, users.orca_cloud_email, users.orca_cloud_user_id, users.orca_cloud_pending_verifier, users.orca_cloud_pending_state, users.orca_cloud_pending_at 
+FROM users 
+WHERE lower(users.username) = lower(?)
+2026-08-01 21:00:24,285 INFO [sqlalchemy.engine.Engine] [422cf93b] [cached since 1.368e+05s ago] ('[USER]',)
+2026-08-01 21:00:24,290 INFO [sqlalchemy.engine.Engine] [422cf93b] SELECT users_1.id AS users_1_id, groups.id AS groups_id, groups.name AS groups_name, groups.description AS groups_description, groups.permissions AS groups_permissions, groups.is_system AS groups_is_system, groups.created_at AS groups_created_at, groups.updated_at AS groups_updated_at 
+FROM users AS users_1 JOIN user_groups AS user_groups_1 ON users_1.id = user_groups_1.user_id JOIN groups ON groups.id = user_groups_1.group_id 
+WHERE users_1.id IN (?)
+2026-08-01 21:00:24,290 INFO [sqlalchemy.engine.Engine] [422cf93b] [cached since 1.368e+05s ago] (1,)
+2026-08-01 21:00:24,291 INFO [sqlalchemy.engine.Engine] [422cf93b] ROLLBACK
+2026-08-01 21:00:24,293 INFO [sqlalchemy.engine.Engine] [422cf93b] BEGIN (implicit)
+2026-08-01 21:00:24,293 INFO [sqlalchemy.engine.Engine] [422cf93b] SELECT auth_ephemeral_tokens.id, auth_ephemeral_tokens.token, auth_ephemeral_tokens.token_type, auth_ephemeral_tokens.username, auth_ephemeral_tokens.provider_id, auth_ephemeral_tokens.nonce, auth_ephemeral_tokens.code_verifier, auth_ephemeral_tokens.challenge_id, auth_ephemeral_tokens.expires_at, auth_ephemeral_tokens.created_at 
+FROM auth_ephemeral_tokens 
+WHERE auth_ephemeral_tokens.token = ? AND auth_ephemeral_tokens.token_type = ?
+2026-08-01 21:00:24,294 INFO [sqlalchemy.engine.Engine] [422cf93b] [cached since 1.368e+05s ago] ('1566984f9eb5ac62155f2b4bf7f6e8f7', 'revoked_jti')
+2026-08-01 21:00:24,295 INFO [sqlalchemy.engine.Engine] [422cf93b] SELECT users.id, users.username, users.email, users.password_hash, users.role, users.auth_source, users.is_active, users.created_at, users.updated_at, users.password_changed_at, users.cloud_token, users.cloud_email, users.cloud_region, users.cloud_token_invalid_at, users.orca_cloud_token, users.orca_cloud_refresh_token, users.orca_cloud_expires_at, users.orca_cloud_email, users.orca_cloud_user_id, users.orca_cloud_pending_verifier, users.orca_cloud_pending_state, users.orca_cloud_pending_at 
+FROM users 
+WHERE lower(users.username) = lower(?)
+2026-08-01 21:00:24,295 INFO [sqlalchemy.engine.Engine] [422cf93b] [cached since 1.368e+05s ago] ('[USER]',)
+2026-08-01 21:00:24,296 INFO [sqlalchemy.engine.Engine] [422cf93b] SELECT users_1.id AS users_1_id, groups.id AS groups_id, groups.name AS groups_name, groups.description AS groups_description, groups.permissions AS groups_permissions, groups.is_system AS groups_is_system, groups.created_at AS groups_created_at, groups.updated_at AS groups_updated_at 
+FROM users AS users_1 JOIN user_groups AS user_groups_1 ON users_1.id = user_groups_1.user_id JOIN groups ON groups.id = user_groups_1.group_id 
+WHERE users_1.id IN (?)
+2026-08-01 21:00:24,296 INFO [sqlalchemy.engine.Engine] [422cf93b] [cached since 1.368e+05s ago] (1,)
+2026-08-01 21:00:24,297 INFO [sqlalchemy.engine.Engine] [422cf93b] ROLLBACK
+2026-08-01 21:00:24,297 INFO [sqlalchemy.engine.Engine] [422cf93b] BEGIN (implicit)
+2026-08-01 21:00:24,298 INFO [sqlalchemy.engine.Engine] [422cf93b] SELECT settings.id, settings."key", settings.value, settings.created_at, settings.updated_at 
+FROM settings 
+WHERE settings."key" = ?
+2026-08-01 21:00:24,298 INFO [sqlalchemy.engine.Engine] [422cf93b] [cached since 1.372e+05s ago] ('debug_logging_enabled',)
+2026-08-01 21:00:24,298 INFO [sqlalchemy.engine.Engine] [422cf93b] SELECT settings.id, settings."key", settings.value, settings.created_at, settings.updated_at 
+FROM settings 
+WHERE settings."key" = ?
+2026-08-01 21:00:24,299 INFO [sqlalchemy.engine.Engine] [422cf93b] [cached since 1.372e+05s ago] ('debug_logging_enabled_at',)
+2026-08-01 21:00:24,299 INFO [sqlalchemy.engine.Engine] [422cf93b] ROLLBACK
+2026-08-01 21:00:24,549 INFO [sqlalchemy.engine.Engine] [e2835fee] BEGIN (implicit)
+2026-08-01 21:00:24,549 INFO [sqlalchemy.engine.Engine] [e2835fee] SELECT auth_ephemeral_tokens.id, auth_ephemeral_tokens.token, auth_ephemeral_tokens.token_type, auth_ephemeral_tokens.username, auth_ephemeral_tokens.provider_id, auth_ephemeral_tokens.nonce, auth_ephemeral_tokens.code_verifier, auth_ephemeral_tokens.challenge_id, auth_ephemeral_tokens.expires_at, auth_ephemeral_tokens.created_at 
+FROM auth_ephemeral_tokens 
+WHERE auth_ephemeral_tokens.token = ? AND auth_ephemeral_tokens.token_type = ?
+2026-08-01 21:00:24,550 INFO [sqlalchemy.engine.Engine] [e2835fee] [cached since 1.368e+05s ago] ('1566984f9eb5ac62155f2b4bf7f6e8f7', 'revoked_jti')
+2026-08-01 21:00:24,550 INFO [sqlalchemy.engine.Engine] [e2835fee] SELECT users.id, users.username, users.email, users.password_hash, users.role, users.auth_source, users.is_active, users.created_at, users.updated_at, users.password_changed_at, users.cloud_token, users.cloud_email, users.cloud_region, users.cloud_token_invalid_at, users.orca_cloud_token, users.orca_cloud_refresh_token, users.orca_cloud_expires_at, users.orca_cloud_email, users.orca_cloud_user_id, users.orca_cloud_pending_verifier, users.orca_cloud_pending_state, users.orca_cloud_pending_at 
+FROM users 
+WHERE lower(users.username) = lower(?)
+2026-08-01 21:00:24,550 INFO [sqlalchemy.engine.Engine] [e2835fee] [cached since 1.368e+05s ago] ('[USER]',)
+2026-08-01 21:00:24,551 INFO [sqlalchemy.engine.Engine] [e2835fee] SELECT users_1.id AS users_1_id, groups.id AS groups_id, groups.name AS groups_name, groups.description AS groups_description, groups.permissions AS groups_permissions, groups.is_system AS groups_is_system, groups.created_at AS groups_created_at, groups.updated_at AS groups_updated_at 
+FROM users AS users_1 JOIN user_groups AS user_groups_1 ON users_1.id = user_groups_1.user_id JOIN groups ON groups.id = user_groups_1.group_id 
+WHERE users_1.id IN (?)
+2026-08-01 21:00:24,552 INFO [sqlalchemy.engine.Engine] [e2835fee] [cached since 1.368e+05s ago] (1,)
+2026-08-01 21:00:24,553 INFO [sqlalchemy.engine.Engine] [e2835fee] ROLLBACK
+2026-08-01 21:00:24,554 INFO [sqlalchemy.engine.Engine] [e2835fee] BEGIN (implicit)
+2026-08-01 21:00:24,554 INFO [sqlalchemy.engine.Engine] [e2835fee] SELECT auth_ephemeral_tokens.id, auth_ephemeral_tokens.token, auth_ephemeral_tokens.token_type, auth_ephemeral_tokens.username, auth_ephemeral_tokens.provider_id, auth_ephemeral_tokens.nonce, auth_ephemeral_tokens.code_verifier, auth_ephemeral_tokens.challenge_id, auth_ephemeral_tokens.expires_at, auth_ephemeral_tokens.created_at 
+FROM auth_ephemeral_tokens 
+WHERE auth_ephemeral_tokens.token = ? AND auth_ephemeral_tokens.token_type = ?
+2026-08-01 21:00:24,554 INFO [sqlalchemy.engine.Engine] [e2835fee] [cached since 1.368e+05s ago] ('1566984f9eb5ac62155f2b4bf7f6e8f7', 'revoked_jti')
+2026-08-01 21:00:24,555 INFO [sqlalchemy.engine.Engine] [e2835fee] SELECT users.id, users.username, users.email, users.password_hash, users.role, users.auth_source, users.is_active, users.created_at, users.updated_at, users.password_changed_at, users.cloud_token, users.cloud_email, users.cloud_region, users.cloud_token_invalid_at, users.orca_cloud_token, users.orca_cloud_refresh_token, users.orca_cloud_expires_at, users.orca_cloud_email, users.orca_cloud_user_id, users.orca_cloud_pending_verifier, users.orca_cloud_pending_state, users.orca_cloud_pending_at 
+FROM users 
+WHERE lower(users.username) = lower(?)
+2026-08-01 21:00:24,555 INFO [sqlalchemy.engine.Engine] [e2835fee] [cached since 1.368e+05s ago] ('[USER]',)
+2026-08-01 21:00:24,556 INFO [sqlalchemy.engine.Engine] [e2835fee] SELECT users_1.id AS users_1_id, groups.id AS groups_id, groups.name AS groups_name, groups.description AS groups_description, groups.permissions AS groups_permissions, groups.is_system AS groups_is_system, groups.created_at AS groups_created_at, groups.updated_at AS groups_updated_at 
+FROM users AS users_1 JOIN user_groups AS user_groups_1 ON users_1.id = user_groups_1.user_id JOIN groups ON groups.id = user_groups_1.group_id 
+WHERE users_1.id IN (?)
+2026-08-01 21:00:24,556 INFO [sqlalchemy.engine.Engine] [e2835fee] [cached since 1.368e+05s ago] (1,)
+2026-08-01 21:00:24,557 INFO [sqlalchemy.engine.Engine] [e2835fee] ROLLBACK
+2026-08-01 21:00:24,557 INFO [sqlalchemy.engine.Engine] [e2835fee] BEGIN (implicit)
+2026-08-01 21:00:24,558 INFO [sqlalchemy.engine.Engine] [e2835fee] SELECT print_queue.id, print_queue.printer_id, print_queue.target_model, print_queue.target_location, print_queue.required_filament_types, print_queue.waiting_reason, print_queue.archive_id, print_queue.library_file_id, print_queue.project_id, print_queue.batch_id, print_queue.position, print_queue.scheduled_time, print_queue.manual_start, print_queue.require_previous_success, print_queue.auto_off_after, print_queue.ams_mapping, print_queue.filament_overrides, print_queue.plate_id, print_queue.print_time_seconds, print_queue.been_jumped, print_queue.gcode_injection, print_queue.dispatch_attempts, print_queue.nozzle_mapping, print_queue.nozzles_info, print_queue.cleanup_library_after_dispatch, print_queue.bed_levelling, print_queue.flow_cali, print_queue.vibration_cali, print_queue.layer_inspect, print_queue.timelapse, print_queue.use_ams, print_queue.nozzle_offset_cali, print_queue.preheat_override, print_queue.preheat_chamber_target_override, print_queue.status, print_queue.dispatching_at, print_queue.gate_acknowledged, print_queue.filament_short, print_queue.skip_filament_check, print_queue.started_at, print_queue.completed_at, print_queue.error_message, print_queue.created_at, print_queue.created_by_id 
+FROM print_queue 
+WHERE print_queue.status = ? ORDER BY print_queue.printer_id NULLS FIRST, print_queue.position
+2026-08-01 21:00:24,558 INFO [sqlalchemy.engine.Engine] [e2835fee] [cached since 1.076e+05s ago] ('pending',)
+2026-08-01 21:00:24,559 INFO [sqlalchemy.engine.Engine] [e2835fee] SELECT library_files.id AS library_files_id, library_files.folder_id AS library_files_folder_id, library_files.project_id AS library_files_project_id, library_files.is_external AS library_files_is_external, library_files.filename AS library_files_filename, library_files.file_path AS library_files_file_path, library_files.file_type AS library_files_file_type, library_files.file_size AS library_files_file_size, library_files.file_hash AS library_files_file_hash, library_files.thumbnail_path AS library_files_thumbnail_path, library_files.file_metadata AS library_files_file_metadata, library_files.print_count AS library_files_print_count, library_files.last_printed_at AS library_files_last_printed_at, library_files.notes AS library_files_notes, library_files.source_type AS library_files_source_type, library_files.source_url AS library_files_source_url, library_files.created_by_id AS library_files_created_by_id, library_files.deleted_at AS library_files_deleted_at, library_files.created_at AS library_files_created_at, library_files.updated_at AS library_files_updated_at, library_files.fs_modified_at AS library_files_fs_modified_at 
+FROM library_files 
+WHERE library_files.id IN (?)
+2026-08-01 21:00:24,559 INFO [sqlalchemy.engine.Engine] [e2835fee] [cached since 1.037e+05s ago] (196,)
+2026-08-01 21:00:24,560 INFO [sqlalchemy.engine.Engine] [e2835fee] SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.role AS users_role, users.auth_source AS users_auth_source, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.password_changed_at AS users_password_changed_at, users.cloud_token AS users_cloud_token, users.cloud_email AS users_cloud_email, users.cloud_region AS users_cloud_region, users.cloud_token_invalid_at AS users_cloud_token_invalid_at, users.orca_cloud_token AS users_orca_cloud_token, users.orca_cloud_refresh_token AS users_orca_cloud_refresh_token, users.orca_cloud_expires_at AS users_orca_cloud_expires_at, users.orca_cloud_email AS users_orca_cloud_email, users.orca_cloud_user_id AS users_orca_cloud_user_id, users.orca_cloud_pending_verifier AS users_orca_cloud_pending_verifier, users.orca_cloud_pending_state AS users_orca_cloud_pending_state, users.orca_cloud_pending_at AS users_orca_cloud_pending_at 
+FROM users 
+WHERE users.id IN (?)
+2026-08-01 21:00:24,560 INFO [sqlalchemy.engine.Engine] [e2835fee] [cached since 1.037e+05s ago] (1,)
+2026-08-01 21:00:24,561 INFO [sqlalchemy.engine.Engine] [e2835fee] SELECT printers.id AS printers_id, printers.name AS printers_name, printers.serial_number AS printers_serial_number, printers.ip_address AS printers_ip_address, printers.access_code AS printers_access_code, printers.model AS printers_model, printers.location AS printers_location, printers.nozzle_count AS printers_nozzle_count, printers.is_active AS printers_is_active, printers.auto_archive AS printers_auto_archive, printers.print_hours_offset AS printers_print_hours_offset, printers.runtime_seconds AS printers_runtime_seconds, printers.last_runtime_update AS printers_last_runtime_update, printers.external_camera_url AS printers_external_camera_url, printers.external_camera_type AS printers_external_camera_type, printers.external_camera_enabled AS printers_external_camera_enabled, printers.external_camera_snapshot_url AS printers_external_camera_snapshot_url, printers.camera_rotation AS printers_camera_rotation, printers.plate_detection_enabled AS printers_plate_detection_enabled, printers.plate_detection_roi_x AS printers_plate_detection_roi_x, printers.plate_detection_roi_y AS printers_plate_detection_roi_y, printers.plate_detection_roi_w AS printers_plate_detection_roi_w, printers.plate_detection_roi_h AS printers_plate_detection_roi_h, printers.awaiting_plate_clear AS printers_awaiting_plate_clear, printers.created_at AS printers_created_at, printers.updated_at AS printers_updated_at 
+FROM printers 
+WHERE printers.id IN (?)
+2026-08-01 21:00:24,561 INFO [sqlalchemy.engine.Engine] [e2835fee] [cached since 1.037e+05s ago] (1,)
+2026-08-01 21:00:24,562 INFO [sqlalchemy.engine.Engine] [e2835fee] SELECT users_1.id AS users_1_id, groups.id AS groups_id, groups.name AS groups_name, groups.description AS groups_description, groups.permissions AS groups_permissions, groups.is_system AS groups_is_system, groups.created_at AS groups_created_at, groups.updated_at AS groups_updated_at 
+FROM users AS users_1 JOIN user_groups AS user_groups_1 ON users_1.id = user_groups_1.user_id JOIN groups ON groups.id = user_groups_1.group_id 
+WHERE users_1.id IN (?)
+2026-08-01 21:00:24,562 INFO [sqlalchemy.engine.Engine] [e2835fee] [cached since 1.037e+05s ago] (1,)
+2026-08-01 21:00:24,563 INFO [sqlalchemy.engine.Engine] [e2835fee] COMMIT
+2026-08-01 21:00:24,733 INFO [sqlalchemy.engine.Engine] [51ab90c0] BEGIN (implicit)
+2026-08-01 21:00:24,733 INFO [sqlalchemy.engine.Engine] [51ab90c0] SELECT auth_ephemeral_tokens.id, auth_ephemeral_tokens.token, auth_ephemeral_tokens.token_type, auth_ephemeral_tokens.username, auth_ephemeral_tokens.provider_id, auth_ephemeral_tokens.nonce, auth_ephemeral_tokens.code_verifier, auth_ephemeral_tokens.challenge_id, auth_ephemeral_tokens.expires_at, auth_ephemeral_tokens.created_at 
+FROM auth_ephemeral_tokens 
+WHERE auth_ephemeral_tokens.token = ? AND auth_ephemeral_tokens.token_type = ?
+2026-08-01 21:00:24,733 INFO [sqlalchemy.engine.Engine] [51ab90c0] [cached since 1.368e+05s ago] ('1566984f9eb5ac62155f2b4bf7f6e8f7', 'revoked_jti')
+2026-08-01 21:00:24,734 INFO [sqlalchemy.engine.Engine] [51ab90c0] SELECT users.id, users.username, users.email, users.password_hash, users.role, users.auth_source, users.is_active, users.created_at, users.updated_at, users.password_changed_at, users.cloud_token, users.cloud_email, users.cloud_region, users.cloud_token_invalid_at, users.orca_cloud_token, users.orca_cloud_refresh_token, users.orca_cloud_expires_at, users.orca_cloud_email, users.orca_cloud_user_id, users.orca_cloud_pending_verifier, users.orca_cloud_pending_state, users.orca_cloud_pending_at 
+FROM users 
+WHERE lower(users.username) = lower(?)
+2026-08-01 21:00:24,734 INFO [sqlalchemy.engine.Engine] [51ab90c0] [cached since 1.368e+05s ago] ('[USER]',)
+2026-08-01 21:00:24,735 INFO [sqlalchemy.engine.Engine] [51ab90c0] SELECT users_1.id AS users_1_id, groups.id AS groups_id, groups.name AS groups_name, groups.description AS groups_description, groups.permissions AS groups_permissions, groups.is_system AS groups_is_system, groups.created_at AS groups_created_at, groups.updated_at AS groups_updated_at 
+FROM users AS users_1 JOIN user_groups AS user_groups_1 ON users_1.id = user_groups_1.user_id JOIN groups ON groups.id = user_groups_1.group_id 
+WHERE users_1.id IN (?)
+2026-08-01 21:00:24,736 INFO [sqlalchemy.engine.Engine] [51ab90c0] [cached since 1.368e+05s ago] (1,)
+2026-08-01 21:00:24,737 INFO [sqlalchemy.engine.Engine] [51ab90c0] ROLLBACK
+2026-08-01 21:00:24,739 INFO [sqlalchemy.engine.Engine] [51ab90c0] BEGIN (implicit)
+2026-08-01 21:00:24,739 INFO [sqlalchemy.engine.Engine] [51ab90c0] SELECT auth_ephemeral_tokens.id, auth_ephemeral_tokens.token, auth_ephemeral_tokens.token_type, auth_ephemeral_tokens.username, auth_ephemeral_tokens.provider_id, auth_ephemeral_tokens.nonce, auth_ephemeral_tokens.code_verifier, auth_ephemeral_tokens.challenge_id, auth_ephemeral_tokens.expires_at, auth_ephemeral_tokens.created_at 
+FROM auth_ephemeral_tokens 
+WHERE auth_ephemeral_tokens.token = ? AND auth_ephemeral_tokens.token_type = ?
+2026-08-01 21:00:24,739 INFO [sqlalchemy.engine.Engine] [51ab90c0] [cached since 1.368e+05s ago] ('1566984f9eb5ac62155f2b4bf7f6e8f7', 'revoked_jti')
+2026-08-01 21:00:24,740 INFO [sqlalchemy.engine.Engine] [51ab90c0] SELECT users.id, users.username, users.email, users.password_hash, users.role, users.auth_source, users.is_active, users.created_at, users.updated_at, users.password_changed_at, users.cloud_token, users.cloud_email, users.cloud_region, users.cloud_token_invalid_at, users.orca_cloud_token, users.orca_cloud_refresh_token, users.orca_cloud_expires_at, users.orca_cloud_email, users.orca_cloud_user_id, users.orca_cloud_pending_verifier, users.orca_cloud_pending_state, users.orca_cloud_pending_at 
+FROM users 
+WHERE lower(users.username) = lower(?)
+2026-08-01 21:00:24,740 INFO [sqlalchemy.engine.Engine] [51ab90c0] [cached since 1.368e+05s ago] ('[USER]',)
+2026-08-01 21:00:24,741 INFO [sqlalchemy.engine.Engine] [51ab90c0] SELECT users_1.id AS users_1_id, groups.id AS groups_id, groups.name AS groups_name, groups.description AS groups_description, groups.permissions AS groups_permissions, groups.is_system AS groups_is_system, groups.created_at AS groups_created_at, groups.updated_at AS groups_updated_at 
+FROM users AS users_1 JOIN user_groups AS user_groups_1 ON users_1.id = user_groups_1.user_id JOIN groups ON groups.id = user_groups_1.group_id 
+WHERE users_1.id IN (?)
+2026-08-01 21:00:24,741 INFO [sqlalchemy.engine.Engine] [51ab90c0] [cached since 1.368e+05s ago] (1,)
+2026-08-01 21:00:24,742 INFO [sqlalchemy.engine.Engine] [51ab90c0] ROLLBACK
+2026-08-01 21:00:24,743 INFO [sqlalchemy.engine.Engine] [51ab90c0] BEGIN (implicit)
+2026-08-01 21:00:24,744 INFO [sqlalchemy.engine.Engine] [51ab90c0] SELECT printers.name, printers.serial_number, printers.ip_address, printers.access_code 
+FROM printers
+2026-08-01 21:00:24,744 INFO [sqlalchemy.engine.Engine] [51ab90c0] [generated in 0.00023s] ()
+2026-08-01 21:00:24,745 INFO [sqlalchemy.engine.Engine] [51ab90c0] SELECT users.username 
+FROM users
+2026-08-01 21:00:24,745 INFO [sqlalchemy.engine.Engine] [51ab90c0] [generated in 0.00018s] ()
+2026-08-01 21:00:24,746 INFO [sqlalchemy.engine.Engine] [51ab90c0] SELECT settings.value 
+FROM settings 
+WHERE settings."key" = ?
+2026-08-01 21:00:24,746 INFO [sqlalchemy.engine.Engine] [51ab90c0] [cached since 1.366e+05s ago] ('bambu_cloud_email',)
+2026-08-01 21:00:24,747 INFO [sqlalchemy.engine.Engine] [51ab90c0] ROLLBACK
