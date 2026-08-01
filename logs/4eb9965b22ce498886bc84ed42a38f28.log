@@ -1,0 +1,200 @@
+2026-07-31 22:09:35,688 INFO [uvicorn.access] [-] [IP]:51389 - "POST /api/v1/library/files?folder_id=2&generate_stl_thumbnails=true HTTP/1.1" 200
+2026-07-31 22:09:37,382 INFO [backend.app.services.stl_thumbnail] [e955c9cb] Simplifying mesh from 185123 vertices
+2026-07-31 22:09:38,067 INFO [backend.app.services.stl_thumbnail] [e955c9cb] Simplified mesh to 99949 vertices
+2026-07-31 22:09:48,944 INFO [backend.app.services.stl_thumbnail] [e955c9cb] Generated STL thumbnail: /app/data/archive/library/thumbnails/0cba5955759a480d9fdaa4ebad2bba49.png
+2026-07-31 22:09:49,158 INFO [uvicorn.access] [f12889d9] [IP]:51389 - "POST /api/v1/library/files?folder_id=2&generate_stl_thumbnails=true HTTP/1.1" 200
+2026-07-31 22:09:50,169 INFO [backend.app.services.stl_thumbnail] [8804f581] Simplifying mesh from 135072 vertices
+2026-07-31 22:09:50,635 INFO [backend.app.services.stl_thumbnail] [8804f581] Simplified mesh to 100000 vertices
+2026-07-31 22:09:59,906 INFO [backend.app.services.stl_thumbnail] [8804f581] Generated STL thumbnail: /app/data/archive/library/thumbnails/a76bf16fb99b4fdebb55c9bd9a4bd63c.png
+2026-07-31 22:10:00,105 INFO [uvicorn.access] [e955c9cb] [IP]:51389 - "POST /api/v1/library/files?folder_id=2&generate_stl_thumbnails=true HTTP/1.1" 200
+2026-07-31 22:10:00,111 INFO [backend.app.main] [-] [SNAPSHOT] Capturing fresh frame for printer 1
+2026-07-31 22:10:00,113 INFO [backend.app.services.camera] [-] Capturing camera frame bytes from [IP] using RTSP (model: H2C)
+2026-07-31 22:10:00,305 ERROR [backend.app.services.camera] [-] ffmpeg frame bytes capture failed (code 183): ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with gcc 14 (Debian 14.2.0-19)
+  configuration: --prefix=/usr --extra-version=0+deb13u1 --toolchain=hardened --libd
+2026-07-31 22:10:25,202 INFO [backend.app.services.stl_thumbnail] [1877ff09] Simplifying mesh from 193654 vertices
+2026-07-31 22:10:25,942 INFO [backend.app.services.stl_thumbnail] [1877ff09] Simplified mesh to 99860 vertices
+2026-07-31 22:10:37,355 INFO [backend.app.services.stl_thumbnail] [1877ff09] Generated STL thumbnail: /app/data/archive/library/thumbnails/e9dcb119063543e2b6af18dba1838b1c.png
+2026-07-31 22:10:37,820 INFO [uvicorn.access] [-] [IP]:64105 - "POST /api/v1/library/files?folder_id=3&generate_stl_thumbnails=true HTTP/1.1" 200
+2026-07-31 22:10:39,115 INFO [backend.app.services.stl_thumbnail] [6bda2099] Simplifying mesh from 154984 vertices
+2026-07-31 22:10:39,788 INFO [backend.app.services.stl_thumbnail] [6bda2099] Simplified mesh to 99999 vertices
+2026-07-31 22:10:49,175 INFO [backend.app.services.stl_thumbnail] [6bda2099] Generated STL thumbnail: /app/data/archive/library/thumbnails/68ebeb4086634e8580d030b80654a39f.png
+2026-07-31 22:10:49,359 INFO [uvicorn.access] [1877ff09] [IP]:64105 - "POST /api/v1/library/files?folder_id=3&generate_stl_thumbnails=true HTTP/1.1" 200
+2026-07-31 22:10:51,379 INFO [backend.app.services.stl_thumbnail] [d7571420] Simplifying mesh from 229718 vertices
+2026-07-31 22:10:52,451 INFO [backend.app.services.stl_thumbnail] [d7571420] Simplified mesh to 99978 vertices
+2026-07-31 22:11:03,197 INFO [backend.app.services.stl_thumbnail] [d7571420] Generated STL thumbnail: /app/data/archive/library/thumbnails/1318b4674300403a9d92d5c011eff52a.png
+2026-07-31 22:11:03,500 INFO [uvicorn.access] [1877ff09] [IP]:64105 - "POST /api/v1/library/files?folder_id=3&generate_stl_thumbnails=true HTTP/1.1" 200
+2026-07-31 22:11:03,503 INFO [backend.app.main] [-] [SNAPSHOT] Capturing fresh frame for printer 1
+2026-07-31 22:11:03,506 INFO [backend.app.services.camera] [-] Capturing camera frame bytes from [IP] using RTSP (model: H2C)
+2026-07-31 22:11:03,662 ERROR [backend.app.services.camera] [-] ffmpeg frame bytes capture failed (code 183): ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with gcc 14 (Debian 14.2.0-19)
+  configuration: --prefix=/usr --extra-version=0+deb13u1 --toolchain=hardened --libd
+2026-07-31 22:11:08,375 INFO [backend.app.services.stl_thumbnail] [b07d35fd] Simplifying mesh from 572162 vertices
+2026-07-31 22:11:11,552 INFO [backend.app.services.stl_thumbnail] [b07d35fd] Simplified mesh to 99684 vertices
+2026-07-31 22:11:22,726 INFO [backend.app.services.stl_thumbnail] [b07d35fd] Generated STL thumbnail: /app/data/archive/library/thumbnails/9e81eae8298b4a75bcd259b95e834011.png
+2026-07-31 22:11:23,109 INFO [uvicorn.access] [-] [IP]:57038 - "POST /api/v1/library/files?folder_id=3&generate_stl_thumbnails=true HTTP/1.1" 200
+2026-07-31 22:11:31,462 INFO [uvicorn.access] [-] [IP]:59306 - "POST /api/v1/library/folders HTTP/1.1" 200
+2026-07-31 22:11:58,356 INFO [backend.app.services.stl_thumbnail] [cd6710a2] Generated STL thumbnail: /app/data/archive/library/thumbnails/bfbc98213c374c048d264713f25107ac.png
+2026-07-31 22:11:58,381 INFO [uvicorn.access] [-] [IP]:49310 - "POST /api/v1/library/files?folder_id=4&generate_stl_thumbnails=true HTTP/1.1" 200
+2026-07-31 22:12:00,168 INFO [backend.app.services.stl_thumbnail] [939e3f27] Generated STL thumbnail: /app/data/archive/library/thumbnails/a538585644d748efb4adf86663db7b83.png
+2026-07-31 22:12:00,218 INFO [uvicorn.access] [cd6710a2] [IP]:49310 - "POST /api/v1/library/files?folder_id=4&generate_stl_thumbnails=true HTTP/1.1" 200
+2026-07-31 22:12:00,512 INFO [backend.app.services.stl_thumbnail] [272066f5] Generated STL thumbnail: /app/data/archive/library/thumbnails/60dc0c628ac34f0f9aff888493e63f24.png
+2026-07-31 22:12:00,526 INFO [uvicorn.access] [939e3f27] [IP]:49310 - "POST /api/v1/library/files?folder_id=4&generate_stl_thumbnails=true HTTP/1.1" 200
+2026-07-31 22:12:00,528 INFO [backend.app.main] [-] [SNAPSHOT] Capturing fresh frame for printer 1
+2026-07-31 22:12:00,529 INFO [backend.app.services.camera] [-] Capturing camera frame bytes from [IP] using RTSP (model: H2C)
+2026-07-31 22:12:01,176 INFO [backend.app.services.stl_thumbnail] [47358f8f] Generated STL thumbnail: /app/data/archive/library/thumbnails/146fbda2e43f4278a2392fa5724c9ff3.png
+2026-07-31 22:12:01,190 INFO [uvicorn.access] [272066f5] [IP]:49310 - "POST /api/v1/library/files?folder_id=4&generate_stl_thumbnails=true HTTP/1.1" 200
+2026-07-31 22:12:01,208 ERROR [backend.app.services.camera] [-] ffmpeg frame bytes capture failed (code 183): ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with gcc 14 (Debian 14.2.0-19)
+  configuration: --prefix=/usr --extra-version=0+deb13u1 --toolchain=hardened --libd
+2026-07-31 22:12:04,151 INFO [backend.app.services.stl_thumbnail] [565813a2] Generated STL thumbnail: /app/data/archive/library/thumbnails/03f6db36f2bc48d4b43c04dceca6aee7.png
+2026-07-31 22:12:04,244 INFO [uvicorn.access] [47358f8f] [IP]:49310 - "POST /api/v1/library/files?folder_id=4&generate_stl_thumbnails=true HTTP/1.1" 200
+2026-07-31 22:12:07,722 INFO [backend.app.services.stl_thumbnail] [dab92037] Generated STL thumbnail: /app/data/archive/library/thumbnails/0b930e9238114321af1711f584965416.png
+2026-07-31 22:12:07,804 INFO [uvicorn.access] [565813a2] [IP]:49310 - "POST /api/v1/library/files?folder_id=4&generate_stl_thumbnails=true HTTP/1.1" 200
+2026-07-31 22:12:45,370 INFO [uvicorn.access] [-] [IP]:63038 - "POST /api/v1/library/folders HTTP/1.1" 200
+2026-07-31 22:13:01,570 INFO [uvicorn.access] [-] [IP]:56723 - "DELETE /api/v1/library/folders/5 HTTP/1.1" 200
+2026-07-31 22:13:03,167 INFO [backend.app.main] [-] [SNAPSHOT] Capturing fresh frame for printer 1
+2026-07-31 22:13:03,169 INFO [backend.app.services.camera] [-] Capturing camera frame bytes from [IP] using RTSP (model: H2C)
+2026-07-31 22:13:03,322 ERROR [backend.app.services.camera] [-] ffmpeg frame bytes capture failed (code 183): ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with gcc 14 (Debian 14.2.0-19)
+  configuration: --prefix=/usr --extra-version=0+deb13u1 --toolchain=hardened --libd
+2026-07-31 22:13:13,764 INFO [uvicorn.access] [-] [IP]:61443 - "POST /api/v1/library/folders HTTP/1.1" 200
+2026-07-31 22:13:40,763 INFO [backend.app.services.stl_thumbnail] [a95bdc37] Simplifying mesh from 983674 vertices
+2026-07-31 22:13:45,166 INFO [backend.app.services.stl_thumbnail] [a95bdc37] Simplified mesh to 99979 vertices
+2026-07-31 22:13:56,175 INFO [backend.app.services.stl_thumbnail] [a95bdc37] Generated STL thumbnail: /app/data/archive/library/thumbnails/2364a452a7d14d3bbf363d43367601bd.png
+2026-07-31 22:13:56,485 INFO [uvicorn.access] [-] [IP]:59730 - "POST /api/v1/library/files?folder_id=5&generate_stl_thumbnails=true HTTP/1.1" 200
+2026-07-31 22:13:56,545 INFO [backend.app.main] [-] Recorded 1 AMS sensor history entries
+2026-07-31 22:14:04,826 INFO [backend.app.main] [-] [SNAPSHOT] Capturing fresh frame for printer 1
+2026-07-31 22:14:04,827 INFO [backend.app.services.camera] [-] Capturing camera frame bytes from [IP] using RTSP (model: H2C)
+2026-07-31 22:14:04,999 ERROR [backend.app.services.camera] [-] ffmpeg frame bytes capture failed (code 183): ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with gcc 14 (Debian 14.2.0-19)
+  configuration: --prefix=/usr --extra-version=0+deb13u1 --toolchain=hardened --libd
+2026-07-31 22:14:15,466 INFO [uvicorn.access] [-] [IP]:50949 - "POST /api/v1/library/folders HTTP/1.1" 200
+2026-07-31 22:14:23,266 INFO [uvicorn.access] [-] [IP]:55116 - "DELETE /api/v1/library/folders/6 HTTP/1.1" 200
+2026-07-31 22:14:30,161 INFO [uvicorn.access] [-] [IP]:59067 - "POST /api/v1/library/folders HTTP/1.1" 200
+2026-07-31 22:14:47,311 INFO [uvicorn.access] [-] [IP]:61877 - "POST /api/v1/library/folders HTTP/1.1" 200
+2026-07-31 22:15:08,678 INFO [uvicorn.access] [-] [IP]:61877 - "POST /api/v1/library/folders HTTP/1.1" 200
+2026-07-31 22:15:12,480 INFO [backend.app.main] [-] [SNAPSHOT] Capturing fresh frame for printer 1
+2026-07-31 22:15:12,482 INFO [backend.app.services.camera] [-] Capturing camera frame bytes from [IP] using RTSP (model: H2C)
+2026-07-31 22:15:12,699 ERROR [backend.app.services.camera] [-] ffmpeg frame bytes capture failed (code 183): ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with gcc 14 (Debian 14.2.0-19)
+  configuration: --prefix=/usr --extra-version=0+deb13u1 --toolchain=hardened --libd
+2026-07-31 22:15:29,027 INFO [uvicorn.access] [-] [IP]:61877 - "POST /api/v1/library/folders HTTP/1.1" 200
+2026-07-31 22:15:54,157 INFO [uvicorn.access] [-] [IP]:61877 - "POST /api/v1/library/folders HTTP/1.1" 200
+2026-07-31 22:16:08,740 INFO [uvicorn.access] [-] [IP]:61877 - "POST /api/v1/library/folders HTTP/1.1" 200
+2026-07-31 22:16:21,188 INFO [backend.app.main] [-] [SNAPSHOT] Capturing fresh frame for printer 1
+2026-07-31 22:16:21,190 INFO [backend.app.services.camera] [-] Capturing camera frame bytes from [IP] using RTSP (model: H2C)
+2026-07-31 22:16:21,418 ERROR [backend.app.services.camera] [-] ffmpeg frame bytes capture failed (code 183): ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with gcc 14 (Debian 14.2.0-19)
+  configuration: --prefix=/usr --extra-version=0+deb13u1 --toolchain=hardened --libd
+2026-07-31 22:17:17,956 INFO [uvicorn.access] [-] [IP]:64194 - "POST /api/v1/library/folders HTTP/1.1" 200
+2026-07-31 22:17:23,887 INFO [backend.app.main] [-] [SNAPSHOT] Capturing fresh frame for printer 1
+2026-07-31 22:17:23,889 INFO [backend.app.services.camera] [-] Capturing camera frame bytes from [IP] using RTSP (model: H2C)
+2026-07-31 22:17:24,045 ERROR [backend.app.services.camera] [-] ffmpeg frame bytes capture failed (code 183): ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with gcc 14 (Debian 14.2.0-19)
+  configuration: --prefix=/usr --extra-version=0+deb13u1 --toolchain=hardened --libd
+2026-07-31 22:17:26,824 INFO [uvicorn.access] [-] [IP]:62862 - "POST /api/v1/library/folders HTTP/1.1" 200
+2026-07-31 22:17:57,436 INFO [uvicorn.access] [-] [IP]:62666 - "POST /api/v1/library/files?folder_id=12&generate_stl_thumbnails=true HTTP/1.1" 200
+2026-07-31 22:18:16,412 INFO [uvicorn.access] [-] [IP]:52289 - "PUT /api/v1/library/files/26 HTTP/1.1" 200
+2026-07-31 22:18:26,728 INFO [backend.app.main] [-] [SNAPSHOT] Capturing fresh frame for printer 1
+2026-07-31 22:18:26,729 INFO [backend.app.services.camera] [-] Capturing camera frame bytes from [IP] using RTSP (model: H2C)
+2026-07-31 22:18:26,914 ERROR [backend.app.services.camera] [-] ffmpeg frame bytes capture failed (code 183): ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with gcc 14 (Debian 14.2.0-19)
+  configuration: --prefix=/usr --extra-version=0+deb13u1 --toolchain=hardened --libd
+2026-07-31 22:18:56,555 INFO [backend.app.main] [-] Recorded 1 AMS sensor history entries
+2026-07-31 22:19:28,474 INFO [backend.app.main] [-] [SNAPSHOT] Capturing fresh frame for printer 1
+2026-07-31 22:19:28,476 INFO [backend.app.services.camera] [-] Capturing camera frame bytes from [IP] using RTSP (model: H2C)
+2026-07-31 22:19:28,660 ERROR [backend.app.services.camera] [-] ffmpeg frame bytes capture failed (code 183): ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with gcc 14 (Debian 14.2.0-19)
+  configuration: --prefix=/usr --extra-version=0+deb13u1 --toolchain=hardened --libd
+2026-07-31 22:20:25,381 INFO [backend.app.main] [-] [SNAPSHOT] Capturing fresh frame for printer 1
+2026-07-31 22:20:25,382 INFO [backend.app.services.camera] [-] Capturing camera frame bytes from [IP] using RTSP (model: H2C)
+2026-07-31 22:20:25,558 ERROR [backend.app.services.camera] [-] ffmpeg frame bytes capture failed (code 183): ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with gcc 14 (Debian 14.2.0-19)
+  configuration: --prefix=/usr --extra-version=0+deb13u1 --toolchain=hardened --libd
+2026-07-31 22:21:24,706 INFO [backend.app.main] [-] [SNAPSHOT] Capturing fresh frame for printer 1
+2026-07-31 22:21:24,707 INFO [backend.app.services.camera] [-] Capturing camera frame bytes from [IP] using RTSP (model: H2C)
+2026-07-31 22:21:24,917 ERROR [backend.app.services.camera] [-] ffmpeg frame bytes capture failed (code 183): ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with gcc 14 (Debian 14.2.0-19)
+  configuration: --prefix=/usr --extra-version=0+deb13u1 --toolchain=hardened --libd
+2026-07-31 22:22:25,452 INFO [backend.app.main] [-] [SNAPSHOT] Capturing fresh frame for printer 1
+2026-07-31 22:22:25,454 INFO [backend.app.services.camera] [-] Capturing camera frame bytes from [IP] using RTSP (model: H2C)
+2026-07-31 22:22:25,637 ERROR [backend.app.services.camera] [-] ffmpeg frame bytes capture failed (code 183): ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with gcc 14 (Debian 14.2.0-19)
+  configuration: --prefix=/usr --extra-version=0+deb13u1 --toolchain=hardened --libd
+2026-07-31 22:22:27,473 INFO [backend.app.api.routes.support] [dbce8590] Log level changed to DEBUG
+2026-07-31 22:22:27,474 INFO [backend.app.api.routes.bug_report] [dbce8590] Bug report: enabled debug logging
+2026-07-31 22:22:27,474 DEBUG [backend.app.services.bambu_mqtt] [dbce8590] [[SERIAL]] Requesting status update (pushall)
+2026-07-31 22:22:27,475 INFO [uvicorn.access] [-] [IP]:54708 - "POST /api/v1/bug-report/start-logging HTTP/1.1" 200
+2026-07-31 22:22:27,849 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Found xcam inside print data: {'allow_skip_parts': False, 'buildplate_marker_detector': True, 'cfg': 1797559, 'first_layer_inspector': True, 'halt_print_sensitivity': 'medium', 'print_halt': True, 'printing_monitor': True, 'spaghetti_detector': True}
+2026-07-31 22:22:27,849 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Parsing xcam data - all fields: ['allow_skip_parts', 'buildplate_marker_detector', 'cfg', 'first_layer_inspector', 'halt_print_sensitivity', 'print_halt', 'printing_monitor', 'spaghetti_detector']
+2026-07-31 22:22:27,849 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] xcam cfg bitmask: 1797559 (binary: 0b110110110110110110111)
+2026-07-31 22:22:27,849 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Received gcode_state: RUNNING, gcode_file: /data/Metadata/plate_1.gcode, subtask_name: 0.2mm layer, 2 walls, 10% infill
+2026-07-31 22:22:27,849 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] AMS dict fields: {'ams_exist_bits': '1', 'ams_exist_bits_raw': '1', 'cali_id': 255, 'cali_stat': 0, 'cfs': [2, 3, 4, 5, 7], 'insert_flag': False, 'power_on_flag': True, 'tray_exist_bits': 'f', 'tray_hall_out_bits': '1', 'tray_is_bbl_bits': 'f', 'tray_now': '0', 'tray_pre': '0', 'tray_read_done_bits': 'f', 'tray_reading_bits': '0', 'tray_tar': '0', 'unbind_ams_stat': 0, 'version': 7581}
+2026-07-31 22:22:27,849 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] tray_now updated: 0
+2026-07-31 22:22:27,850 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Merged AMS data: 1 new units, 1 total
+2026-07-31 22:22:27,850 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] AMS 0 info=0x10001003 -> extruder 0
+2026-07-31 22:22:27,850 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] ams_extruder_map: {'0': 0}
+2026-07-31 22:22:27,850 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] ams_status: 768 (main=3, sub=0)
+2026-07-31 22:22:27,850 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Received command response: push_status
+2026-07-31 22:22:27,850 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] device.extruder.state=2 (switch_state bits 12-14: 0)
+2026-07-31 22:22:27,851 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] info.temp direct: 29°C (heater OFF)
+2026-07-31 22:22:27,851 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] ctc_info keys: ['temp']
+2026-07-31 22:22:27,851 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Chamber heating calculated: target=0.0, current=29.0, heating=False, respect_local=False
+2026-07-31 22:22:27,851 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Chamber temp updated to: 29.0, target: 0.0, heating: False
+2026-07-31 22:22:27,852 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] HMS data received: []
+2026-07-31 22:22:27,852 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] ipcam field: {'agora_service': 'disable', 'brtc_service': 'enable', 'bs_state': 0, 'cap_pic_enable': 'enable', 'ipcam_dev': '1', 'ipcam_record': 'enable', 'laser_preview_res': 6, 'mode_bits': 2, 'resolution': '1080p', 'rtsp_url': 'disable', 'timelapse': 'disable', 'tl_store_hpd_type': 2, 'tl_store_path_type': 2, 'tutk_server': 'enable'}
+2026-07-31 22:22:27,852 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] wifi_signal received: -34dBm
+2026-07-31 22:22:27,852 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] lights_report: [{'mode': 'on', 'node': 'chamber_light'}, {'mode': 'flashing', 'node': 'work_light'}, {'mode': 'on', 'node': 'chamber_light2'}]
+2026-07-31 22:22:27,852 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] MQTT mapping field: [0]
+2026-07-31 22:22:27,852 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] gcode_state: RUNNING -> RUNNING, file: /data/Metadata/plate_1.gcode, subtask: 0.2mm layer, 2 walls, 10% infill
+2026-07-31 22:22:28,927 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Found xcam inside print data: {'allow_skip_parts': False, 'buildplate_marker_detector': True, 'cfg': 1797559, 'first_layer_inspector': True, 'halt_print_sensitivity': 'medium', 'print_halt': True, 'printing_monitor': True, 'spaghetti_detector': True}
+2026-07-31 22:22:28,928 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Parsing xcam data - all fields: ['allow_skip_parts', 'buildplate_marker_detector', 'cfg', 'first_layer_inspector', 'halt_print_sensitivity', 'print_halt', 'printing_monitor', 'spaghetti_detector']
+2026-07-31 22:22:28,928 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] xcam cfg bitmask: 1797559 (binary: 0b110110110110110110111)
+2026-07-31 22:22:28,928 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Received gcode_state: RUNNING, gcode_file: /data/Metadata/plate_1.gcode, subtask_name: 0.2mm layer, 2 walls, 10% infill
+2026-07-31 22:22:28,929 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] ams_extruder_map: {'0': 0}
+2026-07-31 22:22:28,929 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Received command response: push_status
+2026-07-31 22:22:28,929 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] HMS data received: []
+2026-07-31 22:22:28,930 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] lights_report: [{'mode': 'on', 'node': 'chamber_light'}, {'mode': 'flashing', 'node': 'work_light'}, {'mode': 'on', 'node': 'chamber_light2'}]
+2026-07-31 22:22:28,930 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] MQTT mapping field: [0]
+2026-07-31 22:22:28,931 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] gcode_state: RUNNING -> RUNNING, file: /data/Metadata/plate_1.gcode, subtask: 0.2mm layer, 2 walls, 10% infill
+2026-07-31 22:22:30,245 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Found xcam inside print data: {'allow_skip_parts': False, 'buildplate_marker_detector': True, 'cfg': 1797559, 'first_layer_inspector': True, 'halt_print_sensitivity': 'medium', 'print_halt': True, 'printing_monitor': True, 'spaghetti_detector': True}
+2026-07-31 22:22:30,245 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Parsing xcam data - all fields: ['allow_skip_parts', 'buildplate_marker_detector', 'cfg', 'first_layer_inspector', 'halt_print_sensitivity', 'print_halt', 'printing_monitor', 'spaghetti_detector']
+2026-07-31 22:22:30,246 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] xcam cfg bitmask: 1797559 (binary: 0b110110110110110110111)
+2026-07-31 22:22:30,246 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Received gcode_state: RUNNING, gcode_file: /data/Metadata/plate_1.gcode, subtask_name: 0.2mm layer, 2 walls, 10% infill
+2026-07-31 22:22:30,246 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] ams_extruder_map: {'0': 0}
+2026-07-31 22:22:30,246 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Received command response: push_status
+2026-07-31 22:22:30,247 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] HMS data received: []
+2026-07-31 22:22:30,247 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] lights_report: [{'mode': 'on', 'node': 'chamber_light'}, {'mode': 'flashing', 'node': 'work_light'}, {'mode': 'on', 'node': 'chamber_light2'}]
+2026-07-31 22:22:30,248 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] MQTT mapping field: [0]
+2026-07-31 22:22:30,248 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] gcode_state: RUNNING -> RUNNING, file: /data/Metadata/plate_1.gcode, subtask: 0.2mm layer, 2 walls, 10% infill
+2026-07-31 22:22:31,339 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Found xcam inside print data: {'allow_skip_parts': False, 'buildplate_marker_detector': True, 'cfg': 1797559, 'first_layer_inspector': True, 'halt_print_sensitivity': 'medium', 'print_halt': True, 'printing_monitor': True, 'spaghetti_detector': True}
+2026-07-31 22:22:31,340 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Parsing xcam data - all fields: ['allow_skip_parts', 'buildplate_marker_detector', 'cfg', 'first_layer_inspector', 'halt_print_sensitivity', 'print_halt', 'printing_monitor', 'spaghetti_detector']
+2026-07-31 22:22:31,340 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] xcam cfg bitmask: 1797559 (binary: 0b110110110110110110111)
+2026-07-31 22:22:31,340 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Received gcode_state: RUNNING, gcode_file: /data/Metadata/plate_1.gcode, subtask_name: 0.2mm layer, 2 walls, 10% infill
+2026-07-31 22:22:31,341 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] ams_extruder_map: {'0': 0}
+2026-07-31 22:22:31,341 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Received command response: push_status
+2026-07-31 22:22:31,342 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] HMS data received: []
+2026-07-31 22:22:31,343 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] lights_report: [{'mode': 'on', 'node': 'chamber_light'}, {'mode': 'flashing', 'node': 'work_light'}, {'mode': 'on', 'node': 'chamber_light2'}]
+2026-07-31 22:22:31,343 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] MQTT mapping field: [0]
+2026-07-31 22:22:31,344 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] gcode_state: RUNNING -> RUNNING, file: /data/Metadata/plate_1.gcode, subtask: 0.2mm layer, 2 walls, 10% infill
+2026-07-31 22:22:32,593 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Found xcam inside print data: {'allow_skip_parts': False, 'buildplate_marker_detector': True, 'cfg': 1797559, 'first_layer_inspector': True, 'halt_print_sensitivity': 'medium', 'print_halt': True, 'printing_monitor': True, 'spaghetti_detector': True}
+2026-07-31 22:22:32,593 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Parsing xcam data - all fields: ['allow_skip_parts', 'buildplate_marker_detector', 'cfg', 'first_layer_inspector', 'halt_print_sensitivity', 'print_halt', 'printing_monitor', 'spaghetti_detector']
+2026-07-31 22:22:32,593 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] xcam cfg bitmask: 1797559 (binary: 0b110110110110110110111)
+2026-07-31 22:22:32,593 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Received gcode_state: RUNNING, gcode_file: /data/Metadata/plate_1.gcode, subtask_name: 0.2mm layer, 2 walls, 10% infill
+2026-07-31 22:22:32,594 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] ams_extruder_map: {'0': 0}
+2026-07-31 22:22:32,594 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Received command response: push_status
+2026-07-31 22:22:32,596 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] HMS data received: []
+2026-07-31 22:22:32,596 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] lights_report: [{'mode': 'on', 'node': 'chamber_light'}, {'mode': 'flashing', 'node': 'work_light'}, {'mode': 'on', 'node': 'chamber_light2'}]
+2026-07-31 22:22:32,597 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] MQTT mapping field: [0]
+2026-07-31 22:22:32,597 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] gcode_state: RUNNING -> RUNNING, file: /data/Metadata/plate_1.gcode, subtask: 0.2mm layer, 2 walls, 10% infill
+2026-07-31 22:22:33,682 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Found xcam inside print data: {'allow_skip_parts': False, 'buildplate_marker_detector': True, 'cfg': 1797559, 'first_layer_inspector': True, 'halt_print_sensitivity': 'medium', 'print_halt': True, 'printing_monitor': True, 'spaghetti_detector': True}
+2026-07-31 22:22:33,682 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Parsing xcam data - all fields: ['allow_skip_parts', 'buildplate_marker_detector', 'cfg', 'first_layer_inspector', 'halt_print_sensitivity', 'print_halt', 'printing_monitor', 'spaghetti_detector']
+2026-07-31 22:22:33,682 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] xcam cfg bitmask: 1797559 (binary: 0b110110110110110110111)
+2026-07-31 22:22:33,683 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Received gcode_state: RUNNING, gcode_file: /data/Metadata/plate_1.gcode, subtask_name: 0.2mm layer, 2 walls, 10% infill
+2026-07-31 22:22:33,684 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] ams_extruder_map: {'0': 0}
+2026-07-31 22:22:33,684 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] Received command response: push_status
+2026-07-31 22:22:33,685 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] HMS data received: []
+2026-07-31 22:22:33,685 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] lights_report: [{'mode': 'on', 'node': 'chamber_light'}, {'mode': 'flashing', 'node': 'work_light'}, {'mode': 'on', 'node': 'chamber_light2'}]
+2026-07-31 22:22:33,686 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] MQTT mapping field: [0]
+2026-07-31 22:22:33,687 DEBUG [backend.app.services.bambu_mqtt] [-] [[SERIAL]] gcode_state: RUNNING -> RUNNING, file: /data/Metadata/plate_1.gcode, subtask: 0.2mm layer, 2 walls, 10% infill
