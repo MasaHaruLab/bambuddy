@@ -192,7 +192,10 @@ function App() {
                     tokenless visitor to /login, and the backend gates the feed. */}
                 <Route path="/camwall" element={<CamWallPage />} />
 
-                {/* Tier-1 family panel — full-screen, no sidebar layout */}
+                {/* Tier-1 family panel — full-screen, no sidebar layout.
+                    CEO picked the nameplate variant (2026-08-03); /home is the
+                    front door, the gauge variant stays reachable for reference. */}
+                <Route path="home" element={<ProtectedRoute><WebSocketProvider><HomePlatePage /></WebSocketProvider></ProtectedRoute>} />
                 <Route path="home/a" element={<ProtectedRoute><WebSocketProvider><HomeGaugePage /></WebSocketProvider></ProtectedRoute>} />
                 <Route path="home/b" element={<ProtectedRoute><WebSocketProvider><HomePlatePage /></WebSocketProvider></ProtectedRoute>} />
 
