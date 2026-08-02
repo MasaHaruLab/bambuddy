@@ -40,6 +40,8 @@ import { SpoolBuddySettingsPage } from './pages/spoolbuddy/SpoolBuddySettingsPag
 import { SpoolBuddyCalibrationPage } from './pages/spoolbuddy/SpoolBuddyCalibrationPage';
 import { SpoolBuddyWriteTagPage } from './pages/spoolbuddy/SpoolBuddyWriteTagPage';
 import { SpoolBuddyInventoryPage } from './pages/spoolbuddy/SpoolBuddyInventoryPage';
+import { HomeGaugePage } from './pages/home/HomeGaugePage';
+import { HomePlatePage } from './pages/home/HomePlatePage';
 class ErrorBoundary extends Component<{ children: ReactNode }, { error: Error | null; errorInfo: ErrorInfo | null }> {
   state = { error: null as Error | null, errorInfo: null as ErrorInfo | null };
 
@@ -189,6 +191,10 @@ function App() {
                     ?token= kiosk has no session to protect; the page itself sends a
                     tokenless visitor to /login, and the backend gates the feed. */}
                 <Route path="/camwall" element={<CamWallPage />} />
+
+                {/* Tier-1 family panel — full-screen, no sidebar layout */}
+                <Route path="home/a" element={<ProtectedRoute><WebSocketProvider><HomeGaugePage /></WebSocketProvider></ProtectedRoute>} />
+                <Route path="home/b" element={<ProtectedRoute><WebSocketProvider><HomePlatePage /></WebSocketProvider></ProtectedRoute>} />
 
                 {/* SpoolBuddy kiosk UI */}
                 <Route element={<ProtectedRoute><WebSocketProvider><SpoolBuddyLayout /></WebSocketProvider></ProtectedRoute>}>

@@ -1,4 +1,32 @@
 export default {
+  // Tier-1 home panel (/home/a, /home/b)
+  home: {
+    pause: 'Pause',
+    resume: 'Resume',
+    stop: 'Stop',
+    reprint: 'Print again',
+    holdToStop: 'Hold 3 s',
+    controls: 'Print controls',
+    noJob: 'Nothing is printing',
+    layer: 'Layer',
+    queued: 'Added to print queue',
+    offline: 'Printer offline',
+    offlineHint: 'Check the printer power and network',
+    alarmGeneric: 'Printer alarm',
+    errPause: 'Pause failed',
+    errResume: 'Resume failed',
+    errStop: 'Stop failed',
+    errReprint: 'Print again failed',
+    errNoJob: 'No job available to print again',
+    phase: {
+      printing: 'Printing',
+      paused: 'Paused',
+      done: 'Finished',
+      failed: 'Print failed',
+      idle: 'Standby',
+      offline: 'Offline',
+    },
+  },
   // Navigation
   nav: {
     printers: 'Printers',

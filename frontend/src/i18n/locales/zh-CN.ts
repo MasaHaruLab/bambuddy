@@ -1,4 +1,32 @@
 export default {
+  // Tier-1 home panel (/home/a, /home/b)
+  home: {
+    pause: '暂停',
+    resume: '继续',
+    stop: '停止',
+    reprint: '重印',
+    holdToStop: '长按 3 秒',
+    controls: '打印控制',
+    noJob: '没有正在打印的作业',
+    layer: '层',
+    queued: '已加入打印队列',
+    offline: '打印机不在线',
+    offlineHint: '请检查打印机电源和网络',
+    alarmGeneric: '打印机报警',
+    errPause: '暂停失败',
+    errResume: '继续失败',
+    errStop: '停止失败',
+    errReprint: '重印失败',
+    errNoJob: '找不到可重印的作业',
+    phase: {
+      printing: '打印中',
+      paused: '已暂停',
+      done: '已完成',
+      failed: '打印失败',
+      idle: '待机',
+      offline: '离线',
+    },
+  },
   // Navigation
   nav: {
     printers: '打印机',

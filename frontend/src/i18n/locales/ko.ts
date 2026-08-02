@@ -1,4 +1,32 @@
 export default {
+  // Tier-1 home panel (/home/a, /home/b)
+  home: {
+    pause: '일시정지',
+    resume: '재개',
+    stop: '정지',
+    reprint: '다시 인쇄',
+    holdToStop: '3초 길게 누르기',
+    controls: '인쇄 제어',
+    noJob: '인쇄 중인 작업 없음',
+    layer: '레이어',
+    queued: '인쇄 대기열에 추가됨',
+    offline: '프린터 오프라인',
+    offlineHint: '프린터 전원과 네트워크를 확인하세요',
+    alarmGeneric: '프린터 알림',
+    errPause: '일시정지 실패',
+    errResume: '재개 실패',
+    errStop: '정지 실패',
+    errReprint: '다시 인쇄 실패',
+    errNoJob: '다시 인쇄할 작업이 없습니다',
+    phase: {
+      printing: '인쇄 중',
+      paused: '일시정지됨',
+      done: '완료',
+      failed: '인쇄 실패',
+      idle: '대기',
+      offline: '오프라인',
+    },
+  },
   nav: {
     printers: '프린터',
     archives: '아카이브',
