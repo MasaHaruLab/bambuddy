@@ -1785,6 +1785,8 @@ export function SettingsPage() {
                       <option value="oled">{t('settings.bgOled')}</option>
                       <option value="slate">{t('settings.bgSlate')}</option>
                       <option value="forest">{t('settings.bgForest')}</option>
+                      <option value="steel">{t('settings.bgSteel')}</option>
+                      <option value="gunmetal">{t('settings.bgGunmetal')}</option>
                     </select>
                   </div>
                   <div>
@@ -1800,6 +1802,7 @@ export function SettingsPage() {
                       <option value="orange">{t('settings.accentOrange')}</option>
                       <option value="purple">{t('settings.accentPurple')}</option>
                       <option value="red">{t('settings.accentRed')}</option>
+                      <option value="steel">{t('settings.accentSteel')}</option>
                     </select>
                   </div>
                   <div>
@@ -1834,6 +1837,8 @@ export function SettingsPage() {
                       <option value="neutral">{t('settings.bgNeutral')}</option>
                       <option value="warm">{t('settings.bgWarm')}</option>
                       <option value="cool">{t('settings.bgCool')}</option>
+                      <option value="platinum">{t('settings.bgPlatinum')}</option>
+                      <option value="brushed">{t('settings.bgBrushed')}</option>
                     </select>
                   </div>
                   <div>
@@ -1849,6 +1854,7 @@ export function SettingsPage() {
                       <option value="orange">{t('settings.accentOrange')}</option>
                       <option value="purple">{t('settings.accentPurple')}</option>
                       <option value="red">{t('settings.accentRed')}</option>
+                      <option value="steel">{t('settings.accentSteel')}</option>
                     </select>
                   </div>
                   <div>

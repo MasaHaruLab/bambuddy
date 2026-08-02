@@ -199,6 +199,96 @@ html {
   --border-color: #2a3d30;
 }
 
+/* ---- Metal palettes -------------------------------------------------------
+   Platinum / brushed steel for light, gunmetal for dark. The brushed texture is
+   a repeating gradient on <html> rather than a bitmap so it stays crisp on the
+   iPad's 2x display and costs no request. */
+
+.bg-platinum {
+  --bg-primary: #e8e9eb;
+  --bg-secondary: #f6f7f8;
+  --bg-tertiary: #d5d8dc;
+  --text-primary: #16191d;
+  --text-secondary: #4a5058;
+  --text-muted: #6d747d;
+  --text-tertiary: #9aa1aa;
+  --border-color: #c2c7cd;
+  --card-shadow: 0 1px 0 rgba(255, 255, 255, 0.9) inset, 0 2px 6px rgba(20, 26, 33, 0.14);
+}
+
+.bg-brushed {
+  --bg-primary: #d9dce0;
+  --bg-secondary: #eef0f2;
+  --bg-tertiary: #c4c9cf;
+  --text-primary: #101317;
+  --text-secondary: #414851;
+  --text-muted: #626a73;
+  --text-tertiary: #8b939c;
+  --border-color: #aeb5bd;
+  --card-shadow: 0 1px 0 rgba(255, 255, 255, 0.85) inset, 0 2px 8px rgba(16, 22, 28, 0.18);
+}
+
+.dark.bg-steel {
+  --bg-primary: #14171a;
+  --bg-secondary: #1e2328;
+  --bg-tertiary: #2b3138;
+  --text-primary: #eef2f6;
+  --text-secondary: #a3adb8;
+  --text-muted: #7d8792;
+  --text-tertiary: #515a64;
+  --border-color: #333b43;
+  --card-shadow: 0 1px 0 rgba(255, 255, 255, 0.07) inset, 0 6px 18px rgba(0, 0, 0, 0.55);
+}
+
+.dark.bg-gunmetal {
+  --bg-primary: #0d0f11;
+  --bg-secondary: #171a1e;
+  --bg-tertiary: #23272c;
+  --text-primary: #f2f5f8;
+  --text-secondary: #98a2ac;
+  --text-muted: #737d87;
+  --text-tertiary: #474f57;
+  --border-color: #2a2f35;
+  --card-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 8px 22px rgba(0, 0, 0, 0.7);
+}
+
+html.bg-platinum,
+html.bg-brushed,
+html.dark.bg-steel,
+html.dark.bg-gunmetal {
+  background-color: var(--bg-primary);
+  background-image:
+    repeating-linear-gradient(
+      100deg,
+      rgba(255, 255, 255, 0.045) 0px,
+      rgba(255, 255, 255, 0.045) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    radial-gradient(120% 70% at 50% -10%, rgba(255, 255, 255, 0.1), transparent 60%);
+  background-attachment: fixed;
+}
+
+html.bg-platinum,
+html.bg-brushed {
+  background-image:
+    repeating-linear-gradient(
+      100deg,
+      rgba(255, 255, 255, 0.55) 0px,
+      rgba(255, 255, 255, 0.55) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    radial-gradient(120% 70% at 50% -10%, rgba(255, 255, 255, 0.75), transparent 62%);
+}
+
+/* Chrome-blue accent — reads as an instrument panel against the greys. */
+.accent-steel {
+  --accent: #22a7e0;
+  --accent-light: #4dc4f5;
+  --accent-dark: #0f7fb3;
+}
+
 /* Printer card control buttons: stack only when they clip */
 .printer-control-buttons-container {
   container-type: inline-size;

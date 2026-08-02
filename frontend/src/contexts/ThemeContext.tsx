@@ -4,9 +4,9 @@ import { useAuth } from './AuthContext';
 
 type ThemeMode = 'light' | 'dark' | 'system';
 type ThemeStyle = 'classic' | 'glow' | 'vibrant';
-type DarkBackground = 'neutral' | 'warm' | 'cool' | 'oled' | 'slate' | 'forest';
-type LightBackground = 'neutral' | 'warm' | 'cool';
-type ThemeAccent = 'green' | 'teal' | 'blue' | 'orange' | 'purple' | 'red';
+type DarkBackground = 'neutral' | 'warm' | 'cool' | 'oled' | 'slate' | 'forest' | 'steel' | 'gunmetal';
+type LightBackground = 'neutral' | 'warm' | 'cool' | 'platinum' | 'brushed';
+type ThemeAccent = 'green' | 'teal' | 'blue' | 'orange' | 'purple' | 'red' | 'steel';
 
 interface ThemeContextType {
   mode: ThemeMode;
@@ -150,7 +150,9 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       'dark',
       'style-classic', 'style-glow', 'style-vibrant',
       'bg-neutral', 'bg-warm', 'bg-cool', 'bg-oled', 'bg-slate', 'bg-forest',
-      'accent-green', 'accent-teal', 'accent-blue', 'accent-orange', 'accent-purple', 'accent-red'
+      'bg-platinum', 'bg-brushed', 'bg-steel', 'bg-gunmetal',
+      'accent-green', 'accent-teal', 'accent-blue', 'accent-orange', 'accent-purple', 'accent-red',
+      'accent-steel'
     );
 
     // Apply based on resolved mode

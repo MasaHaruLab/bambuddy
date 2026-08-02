@@ -1239,12 +1239,12 @@ export interface AppSettings {
   pipeline_max_copies: number;
   // Dark mode theme settings
   dark_style: 'classic' | 'glow' | 'vibrant';
-  dark_background: 'neutral' | 'warm' | 'cool' | 'oled' | 'slate' | 'forest';
-  dark_accent: 'green' | 'teal' | 'blue' | 'orange' | 'purple' | 'red';
+  dark_background: 'neutral' | 'warm' | 'cool' | 'oled' | 'slate' | 'forest' | 'steel' | 'gunmetal';
+  dark_accent: 'green' | 'teal' | 'blue' | 'orange' | 'purple' | 'red' | 'steel';
   // Light mode theme settings
   light_style: 'classic' | 'glow' | 'vibrant';
-  light_background: 'neutral' | 'warm' | 'cool';
-  light_accent: 'green' | 'teal' | 'blue' | 'orange' | 'purple' | 'red';
+  light_background: 'neutral' | 'warm' | 'cool' | 'platinum' | 'brushed';
+  light_accent: 'green' | 'teal' | 'blue' | 'orange' | 'purple' | 'red' | 'steel';
   // FTP retry settings
   ftp_retry_enabled: boolean;
   ftp_retry_count: number;

@@ -7846,6 +7846,7 @@ export function PrintersPage() {
     orange: 'bg-orange-500 text-white hover:bg-orange-400 border-orange-400/60',
     purple: 'bg-purple-500 text-white hover:bg-purple-400 border-purple-400/60',
     red: 'bg-red-500 text-white hover:bg-red-400 border-red-400/60',
+    steel: 'bg-sky-500 text-white hover:bg-sky-400 border-sky-400/60',
   }[activeAccent];
   const [showAddModal, setShowAddModal] = useState(false);
   const [hideDisconnected, setHideDisconnected] = useState(() => {
