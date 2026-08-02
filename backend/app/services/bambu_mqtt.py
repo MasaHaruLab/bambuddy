@@ -4750,6 +4750,15 @@ class BambuMQTTClient:
         # Backoff reconnects to avoid tight reconnect loops on unstable brokers.
         self._client.reconnect_delay_set(min_delay=1, max_delay=30)
 
+        # paho keeps its own diagnostics — socket errors, keepalive timeouts, and
+        # exceptions raised inside our own callbacks — behind enable_logger().
+        # Without it a dropped session reports nothing but "Unspecified error" and
+        # the cause never reaches the log, which is why a session that dies and
+        # never comes back is so hard to pin down. Only at DEBUG, since paho logs
+        # every PINGREQ.
+        if logger.isEnabledFor(logging.DEBUG):
+            self._client.enable_logger(logger)
+
         # Keepalive: paho sends PINGREQs at this interval, broker considers
         # client dead at 1.5x.  30s is a good balance — fast enough to detect
         # real network loss (45s), not so aggressive that transient hiccups
