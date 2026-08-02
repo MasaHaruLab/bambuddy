@@ -862,11 +862,20 @@ body {
   padding: 18px 26px;
   background: linear-gradient(175deg, var(--bg-secondary), var(--bg-tertiary));
   border: 1px solid var(--border-color);
-  border-radius: 4px;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.55) inset, 0 3px 10px rgba(20, 26, 33, 0.22);
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.55) inset, 0 -1px 0 rgba(20, 26, 33, 0.1) inset, 0 3px 10px rgba(20, 26, 33, 0.22);
   flex: none;
 }
-.dark .hp-plate { box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06) inset, 0 3px 10px rgba(0, 0, 0, 0.5); }
+.dark .hp-plate { box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06) inset, 0 -1px 0 rgba(0, 0, 0, 0.35) inset, 0 3px 10px rgba(0, 0, 0, 0.5); }
+/* engraved hairline frame, like a stamped nameplate border */
+.hp-plate::before {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border: 1px solid color-mix(in srgb, var(--text-tertiary) 32%, transparent);
+  border-radius: 2px;
+  pointer-events: none;
+}
 .hp-screw {
   position: absolute;
   width: 9px;
@@ -892,7 +901,7 @@ body {
 .hp-plate-cover {
   width: clamp(64px, 12vmin, 96px);
   aspect-ratio: 1;
-  border-radius: 4px;
+  border-radius: 2px;
   object-fit: cover;
   border: 1px solid var(--border-color);
   background: var(--bg-primary);
@@ -907,7 +916,7 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.hp-plate-layers { font-size: 14px; color: var(--text-muted); margin-top: 6px; }
+.hp-plate-layers { font-size: 14px; color: var(--text-muted); margin-top: 6px; font-variant-numeric: tabular-nums; }
 
 /* --- variant B: sight gauge -------------------------------- */
 .hp-sight { width: min(92vw, 680px); flex: none; }
@@ -921,17 +930,26 @@ body {
   font-size: clamp(40px, 9vmin, 72px);
   font-weight: 700;
   line-height: 1;
+  font-variant-numeric: tabular-nums;
 }
 .hp-sight-unit { font-size: 15px; font-weight: 600; color: var(--text-muted); margin-left: 10px; }
-.hp-sight-pct { font-size: clamp(22px, 4.5vmin, 34px); font-weight: 650; color: var(--accent, #22a7e0); }
+.hp-sight-pct { font-size: clamp(22px, 4.5vmin, 34px); font-weight: 650; color: var(--accent, #22a7e0); font-variant-numeric: tabular-nums; }
 .hp-sight-track {
   position: relative;
   height: 26px;
-  border-radius: 4px;
+  border-radius: 3px;
   background: var(--bg-tertiary);
   border: 1px solid var(--border-color);
   box-shadow: 0 2px 5px rgba(20, 26, 33, 0.28) inset;
   overflow: hidden;
+}
+/* glass glare across the sight window */
+.hp-sight-track::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2), transparent 45%);
+  pointer-events: none;
 }
 .hp-sight-fill {
   position: absolute;
@@ -966,17 +984,17 @@ body {
   align-items: center;
   gap: 7px;
   padding: clamp(14px, 2.6vh, 22px) 6px 12px;
-  border-radius: 5px;
+  border-radius: 3px;
   border: 1px solid var(--border-color);
   background: linear-gradient(178deg, var(--bg-secondary), var(--bg-tertiary));
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 3px 8px rgba(20, 26, 33, 0.22);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 -1px 0 rgba(20, 26, 33, 0.1) inset, 0 3px 8px rgba(20, 26, 33, 0.22);
   color: var(--text-tertiary);
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   transition: transform 0.08s ease, color 0.15s ease, border-color 0.15s ease;
   overflow: hidden;
 }
-.dark .hp-switch { box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06) inset, 0 3px 8px rgba(0, 0, 0, 0.5); }
+.dark .hp-switch { box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06) inset, 0 -1px 0 rgba(0, 0, 0, 0.35) inset, 0 3px 8px rgba(0, 0, 0, 0.5); }
 .hp-switch svg { width: clamp(26px, 5.5vmin, 38px); height: auto; }
 .hp-switch:disabled { cursor: default; opacity: 0.5; }
 .hp-switch:not(:disabled):active { transform: translateY(2px); }
