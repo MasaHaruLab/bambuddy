@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import { NavLink, Outlet, useNavigate, useLocation } from 'react-router-dom';
-import { Printer, Archive, ListOrdered, BarChart3, Cloud, Settings, Sun, Moon, Monitor, ChevronLeft, ChevronRight, Keyboard, Github, ArrowUpCircle, Wrench, FolderKanban, FolderOpen, X, Menu, Info, Plug, Bug, LogOut, Key, Loader2, Disc3, ShieldAlert, Globe, Bell, type LucideIcon } from 'lucide-react';
+import { Printer, Archive, ListOrdered, BarChart3, Cloud, Settings, Sun, Moon, Monitor, ChevronLeft, ChevronRight, Keyboard, Github, ArrowUpCircle, Wrench, FolderKanban, FolderOpen, X, Menu, Info, Plug, Bug, LogOut, Key, Loader2, Disc3, ShieldAlert, Globe, Bell, Languages, type LucideIcon } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '../contexts/ThemeContext';
 import { KeyboardShortcutsModal } from './KeyboardShortcutsModal';
@@ -70,7 +70,7 @@ export function Layout() {
   const navigate = useNavigate();
   const location = useLocation();
   const { mode, resolvedMode, toggleMode } = useTheme();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const isSidebarCompact = useIsSidebarCompact();
 
   // Theme toggle: mode → icon and tooltip
@@ -625,6 +625,24 @@ export function Layout() {
                 );
               }
             })}
+            {/* Language cycle: same row styling as the nav links, but an
+                action — each click rotates 中文 → English → 한국어. */}
+            <li>
+              <button
+                onClick={() => {
+                  const cycle = ['zh-CN', 'en', 'ko'];
+                  const next = cycle[(cycle.indexOf(i18n.language) + 1) % cycle.length];
+                  i18n.changeLanguage(next);
+                }}
+                className={`w-full flex items-center ${isSidebarCompact || sidebarExpanded ? 'gap-3 px-4' : 'justify-center px-2'} py-3 rounded-lg transition-colors text-bambu-gray-light hover:bg-bambu-dark-tertiary hover:text-white`}
+                title={{ 'zh-CN': '中文', en: 'English', ko: '한국어' }[i18n.language] ?? i18n.language}
+              >
+                <Languages className="w-5 h-5 flex-shrink-0" />
+                {(isSidebarCompact || sidebarExpanded) && (
+                  <span>{{ 'zh-CN': '中文', en: 'English', ko: '한국어' }[i18n.language] ?? i18n.language}</span>
+                )}
+              </button>
+            </li>
           </ul>
         </nav>
 
