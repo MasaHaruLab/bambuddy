@@ -1,4 +1,5 @@
 import type React from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useHomePanel } from './useHomePanel';
 import {
@@ -50,19 +51,31 @@ function SightGauge({ progress, remaining, phaseLabel }: {
 export function HomePlatePage({ bold = false }: { bold?: boolean }) {
   const { t } = useTranslation();
   const panel = useHomePanel();
-  const { status, phase, alarm, actions, actionError, reprintQueued, busy } = panel;
+  const { printer, status, phase, alarm, actions, actionError, reprintQueued, busy } = panel;
   const specs = buttonSpecs(phase);
   const hold = useHoldToStop(actions.stop, phase === 'printing' || phase === 'paused');
+  const [camOk, setCamOk] = useState(true);
 
   const jobName = status?.subtask_name || status?.current_print || null;
   const layers =
     status?.layer_num != null && status?.total_layers ? `${status.layer_num} / ${status.total_layers}` : null;
+  // Live camera. One <img> at a time (each stream costs the server an ffmpeg):
+  // during an alarm it becomes the big "look at the machine" view, otherwise
+  // it fills the nameplate cover slot when the job has no thumbnail.
+  const camUrl = printer && camOk ? `/api/v1/printers/${printer.id}/camera/stream?fps=5` : null;
+  const bigCam = Boolean(alarm && camUrl);
 
   return (
     <div className={`hp-root hp-variant-b${bold ? ' hp-bold' : ''}`}>
       {alarm && <AlarmStrip text={alarmText(alarm, t)} />}
       {actionError && <NoticeStrip tone="red" text={actionError} />}
       {reprintQueued && !actionError && <NoticeStrip tone="blue" text={t('home.queued')} />}
+
+      {bigCam && (
+        <section className="hp-cam-big">
+          <img src={camUrl!} alt="" onError={() => setCamOk(false)} />
+        </section>
+      )}
 
       <section className="hp-plate">
         <i className="hp-screw hp-screw-tl" />
@@ -71,6 +84,8 @@ export function HomePlatePage({ bold = false }: { bold?: boolean }) {
         <i className="hp-screw hp-screw-br" />
         {status?.cover_url ? (
           <img className="hp-plate-cover" src={status.cover_url} alt="" />
+        ) : camUrl && !bigCam ? (
+          <img className="hp-plate-cover" src={camUrl} alt="" onError={() => setCamOk(false)} />
         ) : (
           <div className="hp-plate-cover hp-plate-cover-empty" />
         )}
