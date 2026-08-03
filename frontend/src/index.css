@@ -638,7 +638,11 @@ body {
   padding: max(12px, env(safe-area-inset-top)) 16px max(16px, env(safe-area-inset-bottom));
   background: var(--bg-primary);
   color: var(--text-primary);
-  overflow: hidden;
+  /* Content taller than the screen (small phones, camera view active) must
+     scroll rather than clip — a clipped panel hides the controls entirely. */
+  overflow-y: auto;
+  overflow-x: hidden;
+  gap: 10px;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -1120,4 +1124,7 @@ body {
   .hp-gauge-wrap { width: min(52vh, 92vw); }
   .hp-switchrow { display: grid; grid-template-columns: 1fr 1fr; }
   .hp-plate { flex-direction: row; padding: 14px 18px; }
+  /* Camera must leave room for the readout and the four switches. */
+  .hp-cam-big, .hp-cam-big img { max-height: 24vh; }
+  .hp-sight-big { font-size: clamp(32px, 11vw, 48px); }
 }
