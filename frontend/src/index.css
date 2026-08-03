@@ -629,6 +629,12 @@ body {
    ============================================================ */
 
 .hp-root {
+  /* The family panel never shows green regardless of the app theme: chrome
+     blue is the panel's accent even when the surrounding app runs the
+     default bambu-green palette. */
+  --accent: #22a7e0;
+  --accent-light: #4dc4f5;
+  --accent-dark: #0f7fb3;
   position: fixed;
   inset: 0;
   display: flex;
