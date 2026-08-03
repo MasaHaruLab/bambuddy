@@ -46,7 +46,7 @@ function SightGauge({ progress, remaining, phaseLabel }: {
   );
 }
 
-export function HomePlatePage() {
+export function HomePlatePage({ bold = false }: { bold?: boolean }) {
   const { t } = useTranslation();
   const panel = useHomePanel();
   const { status, phase, alarm, actions, actionError, reprintQueued, busy } = panel;
@@ -58,7 +58,7 @@ export function HomePlatePage() {
     status?.layer_num != null && status?.total_layers ? `${status.layer_num} / ${status.total_layers}` : null;
 
   return (
-    <div className="hp-root hp-variant-b">
+    <div className={`hp-root hp-variant-b${bold ? ' hp-bold' : ''}`}>
       {alarm && <AlarmStrip text={alarm.code ? `${t('home.alarmGeneric')} · ${alarm.code}` : t('home.alarmGeneric')} />}
       {actionError && <NoticeStrip tone="red" text={actionError} />}
       {reprintQueued && !actionError && <NoticeStrip tone="blue" text={t('home.queued')} />}

@@ -198,6 +198,7 @@ function App() {
                 <Route path="home" element={<ProtectedRoute><WebSocketProvider><HomePlatePage /></WebSocketProvider></ProtectedRoute>} />
                 <Route path="home/a" element={<ProtectedRoute><WebSocketProvider><HomeGaugePage /></WebSocketProvider></ProtectedRoute>} />
                 <Route path="home/b" element={<ProtectedRoute><WebSocketProvider><HomePlatePage /></WebSocketProvider></ProtectedRoute>} />
+                <Route path="home/c" element={<ProtectedRoute><WebSocketProvider><HomePlatePage bold /></WebSocketProvider></ProtectedRoute>} />
 
                 {/* SpoolBuddy kiosk UI */}
                 <Route element={<ProtectedRoute><WebSocketProvider><SpoolBuddyLayout /></WebSocketProvider></ProtectedRoute>}>

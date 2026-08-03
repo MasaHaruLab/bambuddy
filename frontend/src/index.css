@@ -1019,6 +1019,65 @@ body {
   background: #c73a3a;
 }
 
+/* --- bold mechanical pass (/home/c) ------------------------ */
+.hp-bold.hp-root {
+  background:
+    radial-gradient(120% 90% at 50% 0%, color-mix(in srgb, var(--bg-secondary) 75%, transparent), transparent 62%),
+    var(--bg-primary);
+}
+/* brushed-metal grain on every panel face */
+.hp-bold .hp-plate,
+.hp-bold .hp-switch {
+  background:
+    repeating-linear-gradient(90deg, color-mix(in srgb, var(--text-primary) 5%, transparent) 0 1px, transparent 1px 3px),
+    linear-gradient(175deg, var(--bg-secondary), var(--bg-tertiary));
+  border-width: 2px;
+  border-radius: 2px;
+}
+.hp-bold .hp-plate {
+  box-shadow: 0 2px 0 rgba(255, 255, 255, 0.5) inset, 0 -3px 8px rgba(20, 26, 33, 0.16) inset, 0 6px 18px rgba(20, 26, 33, 0.3);
+}
+.dark .hp-bold .hp-plate {
+  box-shadow: 0 2px 0 rgba(255, 255, 255, 0.08) inset, 0 -3px 8px rgba(0, 0, 0, 0.4) inset, 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+.hp-bold .hp-plate::before { inset: 7px; }
+.hp-bold .hp-screw { width: 15px; height: 15px; }
+.hp-bold .hp-screw::after { height: 2px; left: 2px; right: 2px; }
+.hp-bold .hp-screw-tl { top: 8px; left: 8px; }
+.hp-bold .hp-screw-tr { top: 8px; right: 8px; }
+.hp-bold .hp-screw-bl { bottom: 8px; left: 8px; }
+.hp-bold .hp-screw-br { bottom: 8px; right: 8px; }
+/* deeper sight gauge with a heavier etched scale */
+.hp-bold .hp-sight-big { font-size: clamp(48px, 11vmin, 88px); }
+.hp-bold .hp-sight-track {
+  height: 38px;
+  border-width: 2px;
+  border-radius: 2px;
+  box-shadow: 0 3px 8px rgba(20, 26, 33, 0.35) inset;
+}
+.hp-bold .hp-sight-ticks i { width: 2px; height: 10px; }
+.hp-bold .hp-sight-ticks i.hp-st-major { height: 18px; }
+/* switches: tinted faces when armed, bigger controls */
+.hp-bold .hp-switch { gap: 9px; }
+.hp-bold .hp-switch svg { width: clamp(32px, 7vmin, 46px); }
+.hp-bold .hp-switch-label { font-size: 16px; font-weight: 700; }
+.hp-bold .hp-switch-holdbar { height: 6px; }
+.hp-bold .hp-switch.hp-tone-amber:not(:disabled) {
+  background:
+    repeating-linear-gradient(90deg, color-mix(in srgb, var(--text-primary) 4%, transparent) 0 1px, transparent 1px 3px),
+    linear-gradient(178deg, color-mix(in srgb, #d97706 14%, var(--bg-secondary)), color-mix(in srgb, #d97706 7%, var(--bg-tertiary)));
+}
+.hp-bold .hp-switch.hp-tone-blue:not(:disabled) {
+  background:
+    repeating-linear-gradient(90deg, color-mix(in srgb, var(--text-primary) 4%, transparent) 0 1px, transparent 1px 3px),
+    linear-gradient(178deg, color-mix(in srgb, var(--accent, #22a7e0) 14%, var(--bg-secondary)), color-mix(in srgb, var(--accent, #22a7e0) 7%, var(--bg-tertiary)));
+}
+.hp-bold .hp-switch.hp-tone-red:not(:disabled) {
+  background:
+    repeating-linear-gradient(90deg, color-mix(in srgb, var(--text-primary) 4%, transparent) 0 1px, transparent 1px 3px),
+    linear-gradient(178deg, color-mix(in srgb, #c73a3a 12%, var(--bg-secondary)), color-mix(in srgb, #c73a3a 6%, var(--bg-tertiary)));
+}
+
 /* --- offline overlay --------------------------------------- */
 .hp-offline {
   position: absolute;
