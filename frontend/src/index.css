@@ -1103,6 +1103,7 @@ body {
   display: block;
   width: 100%;
   max-height: 38vh;
+  aspect-ratio: 16 / 10; /* reserves the box while the MJPEG stream connects */
   object-fit: cover;
 }
 
