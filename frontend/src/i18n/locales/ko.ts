@@ -14,6 +14,7 @@ export default {
     offlineHint: '프린터 전원과 네트워크를 확인하세요',
     alarmGeneric: '프린터 알림',
     alarmPrintFailure: '인쇄가 실패했을 수 있습니다(이상 감지) — 프린터가 일시정지되었습니다. 확인 후 정지 또는 재개를 선택하세요.',
+    clearBedHint: '다시 인쇄하기 전에 빌드 플레이트를 비워 주세요',
     errPause: '일시정지 실패',
     errResume: '재개 실패',
     errStop: '정지 실패',

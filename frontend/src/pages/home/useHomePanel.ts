@@ -86,12 +86,12 @@ export function useHomePanel() {
   // dispatcher start it (the direct reprint endpoint is 410-gone upstream).
   const reprint = useMutation({
     mutationFn: async () => {
-      let archiveId = status?.current_archive_id ?? null;
-      if (archiveId == null) {
-        // Idle panel: fall back to this printer's most recent archive.
-        const archives = await api.getArchives(printerId!, undefined, 1);
-        archiveId = archives?.[0]?.id ?? null;
-      }
+      // Reprint only what actually has a file. A 0-byte archive (the job
+      // never went through the panel, so there was nothing to fetch) would
+      // queue garbage — skip it even when it is the current job's archive.
+      const archives = await api.getArchives(printerId!, undefined, 10);
+      const usable = (archives ?? []).filter((a) => a.file_size > 0);
+      const archiveId = (usable.find((a) => a.id === status?.current_archive_id) ?? usable[0])?.id ?? null;
       if (archiveId == null) throw new Error(t('home.errNoJob'));
       return api.addToQueue({ printer_id: printerId!, archive_id: archiveId, use_ams: true });
     },

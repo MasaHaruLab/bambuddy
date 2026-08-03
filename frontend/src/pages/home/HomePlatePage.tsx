@@ -57,19 +57,26 @@ export function HomePlatePage({ bold = false }: { bold?: boolean }) {
   const [camOk, setCamOk] = useState(true);
 
   const jobName = status?.subtask_name || status?.current_print || null;
+  const active = phase === 'printing' || phase === 'paused';
   const layers =
-    status?.layer_num != null && status?.total_layers ? `${status.layer_num} / ${status.total_layers}` : null;
+    active && status?.layer_num != null && status?.total_layers
+      ? `${status.layer_num} / ${status.total_layers}`
+      : null;
   // Live camera. One <img> at a time (each stream costs the server an ffmpeg):
-  // during an alarm it becomes the big "look at the machine" view, otherwise
-  // it fills the nameplate cover slot when the job has no thumbnail.
+  // during an alarm or after a failure it becomes the big "look at the
+  // machine" view, otherwise it fills the nameplate cover slot when the job
+  // has no thumbnail.
   const camUrl = printer && camOk ? `/api/v1/printers/${printer.id}/camera/stream?fps=5` : null;
-  const bigCam = Boolean(alarm && camUrl);
+  const bigCam = Boolean((alarm || phase === 'failed') && camUrl);
 
   return (
     <div className={`hp-root hp-variant-b${bold ? ' hp-bold' : ''}`}>
       {alarm && <AlarmStrip text={alarmText(alarm, t)} />}
       {actionError && <NoticeStrip tone="red" text={actionError} />}
       {reprintQueued && !actionError && <NoticeStrip tone="blue" text={t('home.queued')} />}
+      {phase === 'failed' && !actionError && !reprintQueued && (
+        <NoticeStrip tone="red" text={t('home.clearBedHint')} />
+      )}
 
       {bigCam && (
         <section className="hp-cam-big">
