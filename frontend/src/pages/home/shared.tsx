@@ -152,6 +152,20 @@ export const BUTTON_ICONS = {
 
 // --- Strips ----------------------------------------------------------------
 
+/**
+ * Human-readable alarm text. Module 0x0C is the printer's AI camera
+ * detection (spaghetti / print-failure watch) — that one gets a plain-words
+ * warning instead of a bare hex code, because it is the alarm a family
+ * member actually needs to act on.
+ */
+export function alarmText(
+  alarm: { code?: string; module?: number },
+  t: (key: string) => string,
+): string {
+  if (alarm.module === 0x0c) return t('home.alarmPrintFailure');
+  return alarm.code ? `${t('home.alarmGeneric')} · ${alarm.code}` : t('home.alarmGeneric');
+}
+
 export function AlarmStrip({ text }: { text: string }) {
   return (
     <div className="hp-alarm" role="alert">

@@ -13,6 +13,7 @@ export default {
     offline: '打印机不在线',
     offlineHint: '请检查打印机电源和网络',
     alarmGeneric: '打印机报警',
+    alarmPrintFailure: '打印可能失败了(检测到异常),打印机已暂停 — 请查看实物后选择停止或继续',
     errPause: '暂停失败',
     errResume: '继续失败',
     errStop: '停止失败',

@@ -13,6 +13,7 @@ export default {
     offline: 'Printer offline',
     offlineHint: 'Check the printer power and network',
     alarmGeneric: 'Printer alarm',
+    alarmPrintFailure: 'The print may have failed (problem detected) — the printer paused itself. Check it, then stop or resume.',
     errPause: 'Pause failed',
     errResume: 'Resume failed',
     errStop: 'Stop failed',

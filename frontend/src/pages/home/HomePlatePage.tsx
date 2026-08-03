@@ -6,6 +6,7 @@ import {
   BUTTON_ICONS,
   NoticeStrip,
   OfflineOverlay,
+  alarmText,
   buttonSpecs,
   formatRemaining,
   useHoldToStop,
@@ -59,7 +60,7 @@ export function HomePlatePage({ bold = false }: { bold?: boolean }) {
 
   return (
     <div className={`hp-root hp-variant-b${bold ? ' hp-bold' : ''}`}>
-      {alarm && <AlarmStrip text={alarm.code ? `${t('home.alarmGeneric')} · ${alarm.code}` : t('home.alarmGeneric')} />}
+      {alarm && <AlarmStrip text={alarmText(alarm, t)} />}
       {actionError && <NoticeStrip tone="red" text={actionError} />}
       {reprintQueued && !actionError && <NoticeStrip tone="blue" text={t('home.queued')} />}
 
