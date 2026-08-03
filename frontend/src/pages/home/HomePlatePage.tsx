@@ -1,5 +1,6 @@
 import type React from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useHomePanel } from './useHomePanel';
 import {
@@ -71,6 +72,15 @@ export function HomePlatePage({ bold = false }: { bold?: boolean }) {
 
   return (
     <div className={`hp-root hp-variant-b${bold ? ' hp-bold' : ''}`}>
+      <Link to="/" className="hp-exit" aria-label={t('home.toApp')}>
+        <svg viewBox="0 0 24 24" aria-hidden>
+          <rect x="4" y="4" width="7" height="7" rx="1.5" fill="currentColor" />
+          <rect x="13" y="4" width="7" height="7" rx="1.5" fill="currentColor" />
+          <rect x="4" y="13" width="7" height="7" rx="1.5" fill="currentColor" />
+          <rect x="13" y="13" width="7" height="7" rx="1.5" fill="currentColor" />
+        </svg>
+        <span>{t('home.toApp')}</span>
+      </Link>
       {alarm && <AlarmStrip text={alarmText(alarm, t)} />}
       {actionError && <NoticeStrip tone="red" text={actionError} />}
       {reprintQueued && !actionError && <NoticeStrip tone="blue" text={t('home.queued')} />}

@@ -15,6 +15,7 @@ export default {
     alarmGeneric: 'Printer alarm',
     alarmPrintFailure: 'The print may have failed (problem detected) — the printer paused itself. Check it, then stop or resume.',
     clearBedHint: 'Clear the build plate before printing again',
+    toApp: 'Main app',
     errPause: 'Pause failed',
     errResume: 'Resume failed',
     errStop: 'Stop failed',

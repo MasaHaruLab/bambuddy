@@ -15,6 +15,7 @@ export default {
     alarmGeneric: '打印机报警',
     alarmPrintFailure: '打印可能失败了(检测到异常),打印机已暂停 — 请查看实物后选择停止或继续',
     clearBedHint: '重印之前,请先清空打印板上的残留',
+    toApp: '主界面',
     errPause: '暂停失败',
     errResume: '继续失败',
     errStop: '停止失败',
